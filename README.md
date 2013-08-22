@@ -1,4 +1,4 @@
-[ANN][BOC]BountyCoin - PoW+PoS|SHA256|Slow start|Lots of Bounties
+[ANN][BLOC]BitBlock - PoW+PoS|SHA256|Slow start|Lots of Bounties
 
 Current Version: 0.1.3
 
@@ -46,37 +46,37 @@ Current Version: 0.1.3
 
 ## Website
 
-http://bountycoin.oicp.net
+http://bitblock.oicp.net
 
 
 ## Download
 
 Windows Binaries:
-https://bountycoin.codeplex.com/releases
+https://bitblock.codeplex.com/releases
 
 Source Code:
-https://github.com/bountycoin/BountyCoin
+https://github.com/bitblock/BitBlock
 
 
 ## Getting Started (Windows)
 
-1. Start up BountyCoin-qt, wait for it to load, then exit.
-2. Put BountyCoin.conf (see sample file below) in your C:/Users/(computerusername)/Appdata/Roaming/BountyCoin
-3. Restart BountyCoin-qt, and you should connect and sync.
+1. Start up BitBlock-qt, wait for it to load, then exit.
+2. Put BitBlock.conf (see sample file below) in your C:/Users/(computerusername)/Appdata/Roaming/BitBlock
+3. Restart BitBlock-qt, and you should connect and sync.
 4. For solo mining, launch CPU miner or GPU miner
 5. Solo example: minerd.exe -a sha256d -o 127.0.0.1:18512 -O (username):(password)
 
 
 ## Getting Started (Mac)
 
-1. Start up BountyCoin-qt, wait for it to load, then exit.
-2. Put BountyCoin.conf (see sample file below) in your ~/Library/Application Support/BountyCoin/
-3. Restart BountyCoin-qt, and you should connect and sync.
+1. Start up BitBlock-qt, wait for it to load, then exit.
+2. Put BitBlock.conf (see sample file below) in your ~/Library/Application Support/BitBlock/
+3. Restart BitBlock-qt, and you should connect and sync.
 4. For solo mining, launch CPU miner
 5. Solo example: ./minerd -a sha256d -o 127.0.0.1:18512 -O (username):(password)
 
 
-## Sample BountyCoin.conf:
+## Sample BitBlock.conf:
 
     listen=1
     daemon=1
@@ -85,7 +85,7 @@ https://github.com/bountycoin/BountyCoin
     rpcpassword=(password)
     rpcport=18512
     rpcconnect=127.0.0.1
-    addnode=bountycoin.oicp.net
+    addnode=bitblock.oicp.net
     addnode=223.197.12.178
     addnode=199.71.215.196
     addnode=216.24.205.232

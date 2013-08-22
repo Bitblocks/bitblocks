@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About BountyCoin</source>
-        <translation>در مورد BountyCoin</translation>
+        <source>About BitBlock</source>
+        <translation>در مورد BitBlock</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;BountyCoin&lt;/b&gt; version</source>
-        <translation>نسخه BountyCoin</translation>
+        <source>&lt;b&gt;BitBlock&lt;/b&gt; version</source>
+        <translation>نسخه BitBlock</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -62,8 +62,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your BountyCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>این آدرسها، آدرسهای BountyCoin شما برای دریافت وجوه هستند. شما ممکن است آدرسهای متفاوت را به هر گیرنده اختصاص دهید که بتوانید مواردی که پرداخت می کنید را پیگیری نمایید</translation>
+        <source>These are your BitBlock addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>این آدرسها، آدرسهای BitBlock شما برای دریافت وجوه هستند. شما ممکن است آدرسهای متفاوت را به هر گیرنده اختصاص دهید که بتوانید مواردی که پرداخت می کنید را پیگیری نمایید</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -77,8 +77,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a BountyCoin address</source>
-        <translation>پیام را برای اثبات آدرس BountyCoin خود امضا کنید</translation>
+        <source>Sign a message to prove you own a BitBlock address</source>
+        <translation>پیام را برای اثبات آدرس BitBlock خود امضا کنید</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -102,8 +102,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified BountyCoin address</source>
-        <translation>یک پیام را برای حصول اطمینان از ورود به سیستم با آدرس BountyCoin مشخص، شناسایی کنید</translation>
+        <source>Verify a message to ensure it was signed with a specified BitBlock address</source>
+        <translation>یک پیام را برای حصول اطمینان از ورود به سیستم با آدرس BitBlock مشخص، شناسایی کنید</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -117,7 +117,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your BountyCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitBlock addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -244,8 +244,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BOUNTYCOINS&lt;/b&gt;!</source>
-        <translation>هشدار: اگر wallet رمزگذاری شود و شما passphrase را گم کنید شما همه اطلاعات BOUNTYCOINS را از دست خواهید داد.</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITBLOCKS&lt;/b&gt;!</source>
+        <translation>هشدار: اگر wallet رمزگذاری شود و شما passphrase را گم کنید شما همه اطلاعات BITBLOCKS را از دست خواهید داد.</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -271,8 +271,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>BountyCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BountyCoins from being stolen by malware infecting your computer.</source>
-        <translation>BountyCoin هم اکنون بسته می‌شود تا فرایند رمزگذاری را تمام کند. به خاطر داشته باشید که رمزگذاری کیف پولتان نمی‌تواند به طور کامل بیتیکون‌های شما را در برابر دزدیده شدن توسط بدافزارهایی که رایانه شما را آلوده می‌کنند، محافظت نماید.</translation>
+        <source>BitBlock will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BitBlocks from being stolen by malware infecting your computer.</source>
+        <translation>BitBlock هم اکنون بسته می‌شود تا فرایند رمزگذاری را تمام کند. به خاطر داشته باشید که رمزگذاری کیف پولتان نمی‌تواند به طور کامل بیتیکون‌های شما را در برابر دزدیده شدن توسط بدافزارهایی که رایانه شما را آلوده می‌کنند، محافظت نماید.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -317,9 +317,9 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
 </context>
 <context>
-    <name>BountyCoinGUI</name>
+    <name>BitBlockGUI</name>
     <message>
-        <location filename="../BountyCoingui.cpp" line="+233"/>
+        <location filename="../BitBlockgui.cpp" line="+233"/>
         <source>Sign &amp;message...</source>
         <translation>امضا و پیام</translation>
     </message>
@@ -370,7 +370,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about BountyCoin</source>
+        <source>Show information about BitBlock</source>
         <translation>نمایش اطلاعات در مورد بیتکویین</translation>
     </message>
     <message>
@@ -415,13 +415,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a BountyCoin address</source>
-        <translation>سکه ها را به آدرس BountyCoin ارسال کن</translation>
+        <source>Send coins to a BitBlock address</source>
+        <translation>سکه ها را به آدرس BitBlock ارسال کن</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for BountyCoin</source>
-        <translation>انتخابهای پیکربندی را برای BountyCoin اصلاح کن</translation>
+        <source>Modify configuration options for BitBlock</source>
+        <translation>انتخابهای پیکربندی را برای BitBlock اصلاح کن</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -451,7 +451,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>BountyCoin</source>
+        <source>BitBlock</source>
         <translation>یت کویین </translation>
     </message>
     <message>
@@ -476,8 +476,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About BountyCoin</source>
-        <translation>در مورد BountyCoin</translation>
+        <source>&amp;About BitBlock</source>
+        <translation>در مورد BitBlock</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -496,12 +496,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your BountyCoin addresses to prove you own them</source>
+        <source>Sign messages with your BitBlock addresses to prove you own them</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified BountyCoin addresses</source>
+        <source>Verify messages to ensure they were signed with specified BitBlock addresses</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -532,12 +532,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+47"/>
-        <source>BountyCoin client</source>
-        <translation>مشتری BountyCoin</translation>
+        <source>BitBlock client</source>
+        <translation>مشتری BitBlock</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to BountyCoin network</source>
+        <source>%n active connection(s) to BitBlock network</source>
         <translation><numerusform>در صد ارتباطات فعال بیتکویین با شبکه %n</numerusform></translation>
     </message>
     <message>
@@ -651,8 +651,8 @@ Address: %4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid BountyCoin address or malformed URI parameters.</source>
-        <translation>URI قابل تحلیل نیست. این خطا ممکن است به دلیل ادرس BOUNTYCOIN اشتباه یا پارامترهای اشتباه URI رخ داده باشد</translation>
+        <source>URI can not be parsed! This can be caused by an invalid BitBlock address or malformed URI parameters.</source>
+        <translation>URI قابل تحلیل نیست. این خطا ممکن است به دلیل ادرس BITBLOCK اشتباه یا پارامترهای اشتباه URI رخ داده باشد</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -665,9 +665,9 @@ Address: %4
         <translation>زمایش شبکه</translation>
     </message>
     <message>
-        <location filename="../BountyCoin.cpp" line="+111"/>
-        <source>A fatal error occurred. BountyCoin can no longer continue safely and will quit.</source>
-        <translation>خطا روی داده است. BountyCoin نمی تواند بدون مشکل ادامه دهد و باید بسته شود</translation>
+        <location filename="../BitBlock.cpp" line="+111"/>
+        <source>A fatal error occurred. BitBlock can no longer continue safely and will quit.</source>
+        <translation>خطا روی داده است. BitBlock نمی تواند بدون مشکل ادامه دهد و باید بسته شود</translation>
     </message>
 </context>
 <context>
@@ -732,8 +732,8 @@ Address: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid BountyCoin address.</source>
-        <translation>آدرس وارد شده %1 یک ادرس صحیح BountyCoin نیست</translation>
+        <source>The entered address &quot;%1&quot; is not a valid BitBlock address.</source>
+        <translation>آدرس وارد شده %1 یک ادرس صحیح BitBlock نیست</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -751,8 +751,8 @@ Address: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>BountyCoin-Qt</source>
-        <translation>BountyCoin-Qt</translation>
+        <source>BitBlock-Qt</source>
+        <translation>BitBlock-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -814,13 +814,13 @@ Address: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start BountyCoin after logging in to the system.</source>
-        <translation>در زمان ورود به سیستم به صورت خودکار BountyCoin را اجرا کن</translation>
+        <source>Automatically start BitBlock after logging in to the system.</source>
+        <translation>در زمان ورود به سیستم به صورت خودکار BitBlock را اجرا کن</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start BountyCoin on system login</source>
-        <translation>اجرای BountyCoin در زمان ورود به سیستم</translation>
+        <source>&amp;Start BitBlock on system login</source>
+        <translation>اجرای BitBlock در زمان ورود به سیستم</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -839,7 +839,7 @@ Address: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the BountyCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the BitBlock client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>اتوماتیک باز کردن بندر بیتکویین در روتر . این فقط در مواردی می باشد که روتر با کمک یو پ ن پ کار می کند</translation>
     </message>
     <message>
@@ -849,8 +849,8 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the BountyCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>اتصال به شبکه BOUNTYCOIN از طریق پراکسی ساکس (برای مثال وقتی از طریق نرم افزار TOR متصل می شوید)</translation>
+        <source>Connect to the BitBlock network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>اتصال به شبکه BITBLOCK از طریق پراکسی ساکس (برای مثال وقتی از طریق نرم افزار TOR متصل می شوید)</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -924,8 +924,8 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting BountyCoin.</source>
-        <translation>زبان میانجی کاربر می تواند در اینجا تنظیم شود. این تنظیمات بعد از شروع دوباره RESTART در BOUNTYCOIN اجرایی خواهند بود.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting BitBlock.</source>
+        <translation>زبان میانجی کاربر می تواند در اینجا تنظیم شود. این تنظیمات بعد از شروع دوباره RESTART در BITBLOCK اجرایی خواهند بود.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -939,8 +939,8 @@ Address: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show BountyCoin addresses in the transaction list or not.</source>
-        <translation>تا آدرسهای BountyCoin در فهرست تراکنش نمایش داده شوند یا نشوند.</translation>
+        <source>Whether to show BitBlock addresses in the transaction list or not.</source>
+        <translation>تا آدرسهای BitBlock در فهرست تراکنش نمایش داده شوند یا نشوند.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -991,8 +991,8 @@ Address: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting BountyCoin.</source>
-        <translation>این تنظیمات پس از اجرای دوباره BountyCoin اعمال می شوند</translation>
+        <source>This setting will take effect after restarting BitBlock.</source>
+        <translation>این تنظیمات پس از اجرای دوباره BitBlock اعمال می شوند</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1010,8 +1010,8 @@ Address: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BountyCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>اطلاعات نمایش داده شده روزآمد نیستند.wallet  شما به صورت خودکار با شبکه BountyCoin بعد از برقراری اتصال روزآمد می شود اما این فرایند هنوز کامل نشده است.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BitBlock network after a connection is established, but this process has not completed yet.</source>
+        <translation>اطلاعات نمایش داده شده روزآمد نیستند.wallet  شما به صورت خودکار با شبکه BitBlock بعد از برقراری اتصال روزآمد می شود اما این فرایند هنوز کامل نشده است.</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -1064,7 +1064,7 @@ Address: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start BountyCoin: click-to-pay handler</source>
+        <source>Cannot start BitBlock: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1214,8 +1214,8 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the BountyCoin-Qt help message to get a list with possible BountyCoin command-line options.</source>
-        <translation>پیام راهنمای BountyCoin-Qt  را برای گرفتن فهرست گزینه های command-line نشان بده</translation>
+        <source>Show the BitBlock-Qt help message to get a list with possible BitBlock command-line options.</source>
+        <translation>پیام راهنمای BitBlock-Qt  را برای گرفتن فهرست گزینه های command-line نشان بده</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1234,13 +1234,13 @@ Address: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>BountyCoin - Debug window</source>
-        <translation>صفحه اشکال زدایی BountyCoin </translation>
+        <source>BitBlock - Debug window</source>
+        <translation>صفحه اشکال زدایی BitBlock </translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>BountyCoin Core</source>
-        <translation> هسته BountyCoin </translation>
+        <source>BitBlock Core</source>
+        <translation> هسته BitBlock </translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1249,8 +1249,8 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the BountyCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>فایلِ لاگِ اشکال زدایی BountyCoin  را از دایرکتوری جاری داده ها باز کنید. این عملیات ممکن است برای فایلهای لاگِ حجیم طولانی شود.</translation>
+        <source>Open the BitBlock debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>فایلِ لاگِ اشکال زدایی BitBlock  را از دایرکتوری جاری داده ها باز کنید. این عملیات ممکن است برای فایلهای لاگِ حجیم طولانی شود.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1259,8 +1259,8 @@ Address: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the BountyCoin RPC console.</source>
-        <translation>به کنسول BountyCoin RPC خوش آمدید</translation>
+        <source>Welcome to the BitBlock RPC console.</source>
+        <translation>به کنسول BitBlock RPC خوش آمدید</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1443,7 +1443,7 @@ Address: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a BountyCoin address (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <source>Enter a BitBlock address (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
         <translation>آدرس بیتکویین وارد کنید  (bijvoorbeeld: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
 </context>
@@ -1508,8 +1508,8 @@ Address: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this BountyCoin address</source>
-        <translation>پیام را برای اثبات آدرس BOUNTYCOIN خود امضا کنید</translation>
+        <source>Sign the message to prove you own this BitBlock address</source>
+        <translation>پیام را برای اثبات آدرس BITBLOCK خود امضا کنید</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1544,8 +1544,8 @@ Address: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified BountyCoin address</source>
-        <translation>پیام را برای اطمنان از ورود به سیستم با آدرس BOUNTYCOIN مشخص خود،تایید کنید</translation>
+        <source>Verify the message to ensure it was signed with the specified BitBlock address</source>
+        <translation>پیام را برای اطمنان از ورود به سیستم با آدرس BITBLOCK مشخص خود،تایید کنید</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1560,7 +1560,7 @@ Address: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a BountyCoin address (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <source>Enter a BitBlock address (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
         <translation>آدرس بیتکویین وارد کنید  (bijvoorbeeld: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
     <message>
@@ -1570,8 +1570,8 @@ Address: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter BountyCoin signature</source>
-        <translation>امضای BountyCoin خود را وارد کنید</translation>
+        <source>Enter BitBlock signature</source>
+        <translation>امضای BitBlock خود را وارد کنید</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2182,10 +2182,10 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>BountyCoin-core</name>
+    <name>BitBlock-core</name>
     <message>
-        <location filename="../BountyCoinstrings.cpp" line="+94"/>
-        <source>BountyCoin version</source>
+        <location filename="../BitBlockstrings.cpp" line="+94"/>
+        <source>BitBlock version</source>
         <translation>سخه بیتکویین</translation>
     </message>
     <message>
@@ -2195,7 +2195,7 @@ Address: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or BountyCoind</source>
+        <source>Send command to -server or BitBlockd</source>
         <translation>ارسال فرمان به سرور یا باتکویین</translation>
     </message>
     <message>
@@ -2215,13 +2215,13 @@ Address: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: BountyCoin.conf)</source>
-        <translation>(: BountyCoin.confپیش فرض: )فایل تنظیمی خاص </translation>
+        <source>Specify configuration file (default: BitBlock.conf)</source>
+        <translation>(: BitBlock.confپیش فرض: )فایل تنظیمی خاص </translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: BountyCoind.pid)</source>
-        <translation>(BountyCoind.pidپیش فرض : ) فایل پید خاص</translation>
+        <source>Specify pid file (default: BitBlockd.pid)</source>
+        <translation>(BitBlockd.pidپیش فرض : ) فایل پید خاص</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2298,13 +2298,13 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=BountyCoinrpc
+rpcuser=BitBlockrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;BountyCoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;BitBlock Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2320,7 +2320,7 @@ for example: alertnotify=echo %%s | mail -s &quot;BountyCoin Alert&quot; admin@f
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. BountyCoin is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. BitBlock is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2365,8 +2365,8 @@ for example: alertnotify=echo %%s | mail -s &quot;BountyCoin Alert&quot; admin@f
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong BountyCoin will not work properly.</source>
-        <translation>هشدار: لطفا زمان و تاریخ رایانه خود را تصحیح نمایید! اگر ساعت رایانه شما اشتباه باشد BountyCoin ممکن است صحیح کار نکند</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong BitBlock will not work properly.</source>
+        <translation>هشدار: لطفا زمان و تاریخ رایانه خود را تصحیح نمایید! اگر ساعت رایانه شما اشتباه باشد BitBlock ممکن است صحیح کار نکند</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2615,8 +2615,8 @@ for example: alertnotify=echo %%s | mail -s &quot;BountyCoin Alert&quot; admin@f
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the BountyCoin Wiki for SSL setup instructions)</source>
-        <translation>گزینه ssl (به ویکیBountyCoin برای راهنمای راه اندازی ssl مراجعه شود)</translation>
+        <source>SSL options: (see the BitBlock Wiki for SSL setup instructions)</source>
+        <translation>گزینه ssl (به ویکیBitBlock برای راهنمای راه اندازی ssl مراجعه شود)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2805,12 +2805,12 @@ for example: alertnotify=echo %%s | mail -s &quot;BountyCoin Alert&quot; admin@f
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of BountyCoin</source>
-        <translation>خطا در بارگیری wallet.dat: کیف پول به ویرایش جدیدتری از BountyCoin نیاز دارد</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of BitBlock</source>
+        <translation>خطا در بارگیری wallet.dat: کیف پول به ویرایش جدیدتری از BitBlock نیاز دارد</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart BountyCoin to complete</source>
+        <source>Wallet needed to be rewritten: restart BitBlock to complete</source>
         <translation>سلام</translation>
     </message>
     <message>
@@ -2870,8 +2870,8 @@ for example: alertnotify=echo %%s | mail -s &quot;BountyCoin Alert&quot; admin@f
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. BountyCoin is probably already running.</source>
-        <translation>اتصال به %s از این رایانه امکان پذیر نیست. BountyCoin احتمالا در حال اجراست.</translation>
+        <source>Unable to bind to %s on this computer. BitBlock is probably already running.</source>
+        <translation>اتصال به %s از این رایانه امکان پذیر نیست. BitBlock احتمالا در حال اجراست.</translation>
     </message>
     <message>
         <location line="+64"/>

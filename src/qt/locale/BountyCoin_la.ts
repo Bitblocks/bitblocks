@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About BountyCoin</source>
-        <translation>Informatio de BountyCoin</translation>
+        <source>About BitBlock</source>
+        <translation>Informatio de BitBlock</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;BountyCoin&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;BountyCoin&lt;/b&gt; versio</translation>
+        <source>&lt;b&gt;BitBlock&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;BitBlock&lt;/b&gt; versio</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -66,8 +66,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your BountyCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Haec sunt inscriptiones BountyCoin tuae pro accipendo pensitationes.  Cupias variam ad quemque mittentem dare ut melius scias quem tibi pensare.</translation>
+        <source>These are your BitBlock addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Haec sunt inscriptiones BitBlock tuae pro accipendo pensitationes.  Cupias variam ad quemque mittentem dare ut melius scias quem tibi pensare.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -81,8 +81,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a BountyCoin address</source>
-        <translation>Signa nuntium ut demonstres inscriptionem BountyCoin a te possessam esse</translation>
+        <source>Sign a message to prove you own a BitBlock address</source>
+        <translation>Signa nuntium ut demonstres inscriptionem BitBlock a te possessam esse</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -106,8 +106,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified BountyCoin address</source>
-        <translation>Verifica nuntium ut cures signatum esse cum specificata inscriptione BountyCoin</translation>
+        <source>Verify a message to ensure it was signed with a specified BitBlock address</source>
+        <translation>Verifica nuntium ut cures signatum esse cum specificata inscriptione BitBlock</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -121,7 +121,7 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your BountyCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitBlock addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Hae sunt inscriptiones mittendi pensitationes.  Semper inspice quantitatem et inscriptionem accipiendi antequam nummos mittis.</translation>
     </message>
     <message>
@@ -247,7 +247,7 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BOUNTYCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITBLOCKS&lt;/b&gt;!</source>
         <translation>Monitio: Si cassidile tuum cifras et tesseram amittis, tu &lt;b&gt;AMITTES OMNES TUOS NUMMOS MEGAOS&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -274,8 +274,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="-56"/>
-        <source>BountyCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BountyCoins from being stolen by malware infecting your computer.</source>
-        <translation>BountyCoin iam desinet ut finiat actionem cifrandi.  Memento cassidile cifrare non posse cuncte curare ne tui nummi clepantur ab malis programatibus in tuo computatro.</translation>
+        <source>BitBlock will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BitBlocks from being stolen by malware infecting your computer.</source>
+        <translation>BitBlock iam desinet ut finiat actionem cifrandi.  Memento cassidile cifrare non posse cuncte curare ne tui nummi clepantur ab malis programatibus in tuo computatro.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -320,9 +320,9 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
 </context>
 <context>
-    <name>BountyCoinGUI</name>
+    <name>BitBlockGUI</name>
     <message>
-        <location filename="../BountyCoingui.cpp" line="+233"/>
+        <location filename="../BitBlockgui.cpp" line="+233"/>
         <source>Sign &amp;message...</source>
         <translation>Signa &amp;nuntium...</translation>
     </message>
@@ -373,8 +373,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about BountyCoin</source>
-        <translation>Monstra informationem de BountyCoin</translation>
+        <source>Show information about BitBlock</source>
+        <translation>Monstra informationem de BitBlock</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -418,13 +418,13 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a BountyCoin address</source>
-        <translation>Mitte nummos ad inscriptionem BountyCoin</translation>
+        <source>Send coins to a BitBlock address</source>
+        <translation>Mitte nummos ad inscriptionem BitBlock</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for BountyCoin</source>
-        <translation>Muta configurationis optiones pro BountyCoin</translation>
+        <source>Modify configuration options for BitBlock</source>
+        <translation>Muta configurationis optiones pro BitBlock</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -454,8 +454,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>BountyCoin</source>
-        <translation>BountyCoin</translation>
+        <source>BitBlock</source>
+        <translation>BitBlock</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -479,8 +479,8 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About BountyCoin</source>
-        <translation>&amp;Informatio de BountyCoin</translation>
+        <source>&amp;About BitBlock</source>
+        <translation>&amp;Informatio de BitBlock</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -499,13 +499,13 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your BountyCoin addresses to prove you own them</source>
-        <translation>Signa nuntios cum tuis inscriptionibus BountyCoin ut demonstres te eas possidere</translation>
+        <source>Sign messages with your BitBlock addresses to prove you own them</source>
+        <translation>Signa nuntios cum tuis inscriptionibus BitBlock ut demonstres te eas possidere</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified BountyCoin addresses</source>
-        <translation>Verifica nuntios ut certus sis eos signatos esse cum specificatis inscriptionibus BountyCoin</translation>
+        <source>Verify messages to ensure they were signed with specified BitBlock addresses</source>
+        <translation>Verifica nuntios ut certus sis eos signatos esse cum specificatis inscriptionibus BitBlock</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -535,13 +535,13 @@ Hoc productum continet programmata composita ab OpenSSL Project pro utendo in Op
     </message>
     <message>
         <location line="+47"/>
-        <source>BountyCoin client</source>
-        <translation>BountyCoin cliens</translation>
+        <source>BitBlock client</source>
+        <translation>BitBlock cliens</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to BountyCoin network</source>
-        <translation><numerusform>%n activa conexio ad rete BountyCoin</numerusform><numerusform>%n activae conexiones ad rete BountyCoin</numerusform></translation>
+        <source>%n active connection(s) to BitBlock network</source>
+        <translation><numerusform>%n activa conexio ad rete BitBlock</numerusform><numerusform>%n activae conexiones ad rete BitBlock</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -655,8 +655,8 @@ Inscriptio: %4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid BountyCoin address or malformed URI parameters.</source>
-        <translation>URI intellegi non posse!  Huius causa possit inscriptionem BountyCoin non validam aut URI parametra maleformata.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid BitBlock address or malformed URI parameters.</source>
+        <translation>URI intellegi non posse!  Huius causa possit inscriptionem BitBlock non validam aut URI parametra maleformata.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -669,9 +669,9 @@ Inscriptio: %4
         <translation>Cassidile &lt;b&gt;cifratum&lt;/b&gt; est et iam nunc &lt;b&gt;seratum&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../BountyCoin.cpp" line="+111"/>
-        <source>A fatal error occurred. BountyCoin can no longer continue safely and will quit.</source>
-        <translation>Error fatalis accidit.  BountyCoin nondum pergere tute potest, et exibit.</translation>
+        <location filename="../BitBlock.cpp" line="+111"/>
+        <source>A fatal error occurred. BitBlock can no longer continue safely and will quit.</source>
+        <translation>Error fatalis accidit.  BitBlock nondum pergere tute potest, et exibit.</translation>
     </message>
 </context>
 <context>
@@ -736,8 +736,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid BountyCoin address.</source>
-        <translation>Inscriptio inserta &quot;%1&quot; non valida inscriptio BountyCoin est.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid BitBlock address.</source>
+        <translation>Inscriptio inserta &quot;%1&quot; non valida inscriptio BitBlock est.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -755,8 +755,8 @@ Inscriptio: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>BountyCoin-Qt</source>
-        <translation>BountyCoin-Qt</translation>
+        <source>BitBlock-Qt</source>
+        <translation>BitBlock-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -818,13 +818,13 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start BountyCoin after logging in to the system.</source>
-        <translation>Pelle BountyCoin per se postquam in systema inire.</translation>
+        <source>Automatically start BitBlock after logging in to the system.</source>
+        <translation>Pelle BitBlock per se postquam in systema inire.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start BountyCoin on system login</source>
-        <translation>&amp;Pelle BountyCoin cum inire systema</translation>
+        <source>&amp;Start BitBlock on system login</source>
+        <translation>&amp;Pelle BitBlock cum inire systema</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -843,8 +843,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the BountyCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Aperi per se portam clientis BountyCoin in itineratore.  Hoc tantum effectivum est si itineratrum tuum supportat UPnP et id activum est.</translation>
+        <source>Automatically open the BitBlock client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Aperi per se portam clientis BitBlock in itineratore.  Hoc tantum effectivum est si itineratrum tuum supportat UPnP et id activum est.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -853,8 +853,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the BountyCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Connecte ad rete BountyCoin per SOCKS vicarium (e.g. quando conectens per Tor).</translation>
+        <source>Connect to the BitBlock network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Connecte ad rete BitBlock per SOCKS vicarium (e.g. quando conectens per Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -928,8 +928,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting BountyCoin.</source>
-        <translation>Lingua monstranda utenti hic constitui potest.  Haec configuratio effectiva erit postquam BountyCoin iterum initiatum erit.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting BitBlock.</source>
+        <translation>Lingua monstranda utenti hic constitui potest.  Haec configuratio effectiva erit postquam BitBlock iterum initiatum erit.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -943,8 +943,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show BountyCoin addresses in the transaction list or not.</source>
-        <translation>Num monstrare inscriptiones BountyCoin in enumeratione transactionum.</translation>
+        <source>Whether to show BitBlock addresses in the transaction list or not.</source>
+        <translation>Num monstrare inscriptiones BitBlock in enumeratione transactionum.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -995,8 +995,8 @@ Inscriptio: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting BountyCoin.</source>
-        <translation>Haec configuratio effectiva erit postquam BountyCoin iterum initiatum erit.</translation>
+        <source>This setting will take effect after restarting BitBlock.</source>
+        <translation>Haec configuratio effectiva erit postquam BitBlock iterum initiatum erit.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1014,8 +1014,8 @@ Inscriptio: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BountyCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Monstrata informatio fortasse non recentissima est.  Tuum cassidile per se synchronizat cum rete BountyCoin postquam conexio constabilita est, sed hoc actio nondum perfecta est.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BitBlock network after a connection is established, but this process has not completed yet.</source>
+        <translation>Monstrata informatio fortasse non recentissima est.  Tuum cassidile per se synchronizat cum rete BitBlock postquam conexio constabilita est, sed hoc actio nondum perfecta est.</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -1068,8 +1068,8 @@ Inscriptio: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start BountyCoin: click-to-pay handler</source>
-        <translation>BountyCoin incipere non potest: cliccare-ad-pensandum handler</translation>
+        <source>Cannot start BitBlock: click-to-pay handler</source>
+        <translation>BitBlock incipere non potest: cliccare-ad-pensandum handler</translation>
     </message>
 </context>
 <context>
@@ -1218,8 +1218,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the BountyCoin-Qt help message to get a list with possible BountyCoin command-line options.</source>
-        <translation>Monstra nuntium auxilii BountyCoin-Qt ut videas enumerationem possibilium optionum BountyCoin mandati initiantis.</translation>
+        <source>Show the BitBlock-Qt help message to get a list with possible BitBlock command-line options.</source>
+        <translation>Monstra nuntium auxilii BitBlock-Qt ut videas enumerationem possibilium optionum BitBlock mandati initiantis.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1238,13 +1238,13 @@ Inscriptio: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>BountyCoin - Debug window</source>
-        <translation>BountyCoin - Fenestra debug</translation>
+        <source>BitBlock - Debug window</source>
+        <translation>BitBlock - Fenestra debug</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>BountyCoin Core</source>
-        <translation>BountyCoin Nucleus</translation>
+        <source>BitBlock Core</source>
+        <translation>BitBlock Nucleus</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1253,8 +1253,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the BountyCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Aperi plicam catalogi de BountyCoin debug ex activo indice datorum.  Hoc possit pauca secunda pro plicis magnis catalogi.</translation>
+        <source>Open the BitBlock debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Aperi plicam catalogi de BitBlock debug ex activo indice datorum.  Hoc possit pauca secunda pro plicis magnis catalogi.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1263,8 +1263,8 @@ Inscriptio: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the BountyCoin RPC console.</source>
-        <translation>Bene ventio in terminale RPC de BountyCoin.</translation>
+        <source>Welcome to the BitBlock RPC console.</source>
+        <translation>Bene ventio in terminale RPC de BitBlock.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1447,8 +1447,8 @@ Inscriptio: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a BountyCoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Insero inscriptionem BountyCoin (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a BitBlock address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>Insero inscriptionem BitBlock (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
 </context>
 <context>
@@ -1512,8 +1512,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this BountyCoin address</source>
-        <translation>Signa nuntium ut demonstres hanc inscriptionem BountyCoin a te possessa esse</translation>
+        <source>Sign the message to prove you own this BitBlock address</source>
+        <translation>Signa nuntium ut demonstres hanc inscriptionem BitBlock a te possessa esse</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1548,8 +1548,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified BountyCoin address</source>
-        <translation>Verifica nuntium ut cures signatum esse cum specifica inscriptione BountyCoin</translation>
+        <source>Verify the message to ensure it was signed with the specified BitBlock address</source>
+        <translation>Verifica nuntium ut cures signatum esse cum specifica inscriptione BitBlock</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1564,8 +1564,8 @@ Inscriptio: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a BountyCoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Insere inscriptionem BountyCoin (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a BitBlock address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>Insere inscriptionem BitBlock (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1574,8 +1574,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter BountyCoin signature</source>
-        <translation>Insere signationem BountyCoin</translation>
+        <source>Enter BitBlock signature</source>
+        <translation>Insere signationem BitBlock</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -2183,11 +2183,11 @@ Inscriptio: %4
     </message>
 </context>
 <context>
-    <name>BountyCoin-core</name>
+    <name>BitBlock-core</name>
     <message>
-        <location filename="../BountyCoinstrings.cpp" line="+94"/>
-        <source>BountyCoin version</source>
-        <translation>Versio de BountyCoin</translation>
+        <location filename="../BitBlockstrings.cpp" line="+94"/>
+        <source>BitBlock version</source>
+        <translation>Versio de BitBlock</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2196,8 +2196,8 @@ Inscriptio: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or BountyCoind</source>
-        <translation>Mitte mandatum ad -server vel BountyCoind</translation>
+        <source>Send command to -server or BitBlockd</source>
+        <translation>Mitte mandatum ad -server vel BitBlockd</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2216,13 +2216,13 @@ Inscriptio: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: BountyCoin.conf)</source>
-        <translation>Specifica configurationis plicam (praedefinitum: BountyCoin.conf)</translation>
+        <source>Specify configuration file (default: BitBlock.conf)</source>
+        <translation>Specifica configurationis plicam (praedefinitum: BitBlock.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: BountyCoind.pid)</source>
-        <translation>Specifica pid plicam (praedefinitum: BountyCoin.pid)</translation>
+        <source>Specify pid file (default: BitBlockd.pid)</source>
+        <translation>Specifica pid plicam (praedefinitum: BitBlock.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2299,24 +2299,24 @@ Inscriptio: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=BountyCoinrpc
+rpcuser=BitBlockrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;BountyCoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;BitBlock Alert&quot; admin@foo.com
 </source>
         <translation>%s, necesse est te rpcpassword constituere in plica configurationis:
 %s
 Hortatur te hanc fortuitam tesseram uti:
-rpcuser=BountyCoinrpc
+rpcuser=BitBlockrpc
 rpcpassword=%s
 (non est necesse te hanc tesseram meminisse)
 Nomen usoris et tessera eadem esse NON POSSUNT.
 Si plica non existit, eam crea cum permissionibus ut eius dominus tantum sinitur id legere.
 Quoque hortatur alertnotify constituere ut tu notificetur de problematibus;
-exempli gratia: alertnotify=echo %%s | mail -s &quot;BountyCoin Notificatio&quot; admin@foo.com
+exempli gratia: alertnotify=echo %%s | mail -s &quot;BitBlock Notificatio&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -2331,8 +2331,8 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;BountyCoin Notificatio&quot
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. BountyCoin is probably already running.</source>
-        <translation>Non posse serare datorum indicem %s.  BountyCoin probabiliter iam operatur.</translation>
+        <source>Cannot obtain a lock on data directory %s. BitBlock is probably already running.</source>
+        <translation>Non posse serare datorum indicem %s.  BitBlock probabiliter iam operatur.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2376,8 +2376,8 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;BountyCoin Notificatio&quot
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong BountyCoin will not work properly.</source>
-        <translation>Monitio: Sodes cura ut dies tempusque computatri tui recti sunt!  Si horologium tuum pravum est, BountyCoin non proprie fungetur.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong BitBlock will not work properly.</source>
+        <translation>Monitio: Sodes cura ut dies tempusque computatri tui recti sunt!  Si horologium tuum pravum est, BitBlock non proprie fungetur.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2626,8 +2626,8 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;BountyCoin Notificatio&quot
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the BountyCoin Wiki for SSL setup instructions)</source>
-        <translation>Optiones SSL: (vide vici de BountyCoin pro instructionibus SSL configurationis)</translation>
+        <source>SSL options: (see the BitBlock Wiki for SSL setup instructions)</source>
+        <translation>Optiones SSL: (vide vici de BitBlock pro instructionibus SSL configurationis)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2816,13 +2816,13 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;BountyCoin Notificatio&quot
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of BountyCoin</source>
-        <translation>Error legendi wallet.dat: Cassidili necesse est recentior versio BountyCoin</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of BitBlock</source>
+        <translation>Error legendi wallet.dat: Cassidili necesse est recentior versio BitBlock</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart BountyCoin to complete</source>
-        <translation>Cassidili necesse erat rescribi: Repelle BountyCoin ut compleas</translation>
+        <source>Wallet needed to be rewritten: restart BitBlock to complete</source>
+        <translation>Cassidili necesse erat rescribi: Repelle BitBlock ut compleas</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2881,8 +2881,8 @@ exempli gratia: alertnotify=echo %%s | mail -s &quot;BountyCoin Notificatio&quot
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. BountyCoin is probably already running.</source>
-        <translation>Non posse conglutinare ad %s in hoc cumputatro.  BountyCoin probabiliter iam operatur.</translation>
+        <source>Unable to bind to %s on this computer. BitBlock is probably already running.</source>
+        <translation>Non posse conglutinare ad %s in hoc cumputatro.  BitBlock probabiliter iam operatur.</translation>
     </message>
     <message>
         <location line="+64"/>

@@ -15,7 +15,7 @@ class QAbstractItemView;
 QT_END_NAMESPACE
 class SendCoinsRecipient;
 
-/** Utility functions used by the BountyCoin Qt UI.
+/** Utility functions used by the BitBlock Qt UI.
  */
 namespace GUIUtil
 {
@@ -23,17 +23,17 @@ namespace GUIUtil
     QString dateTimeStr(const QDateTime &datetime);
     QString dateTimeStr(qint64 nTime);
 
-    // Render BountyCoin addresses in monospace font
-    QFont BountyCoinAddressFont();
+    // Render BitBlock addresses in monospace font
+    QFont BitBlockAddressFont();
 
     // Set up widgets for address and amounts
     void setupAddressWidget(QLineEdit *widget, QWidget *parent);
     void setupAmountWidget(QLineEdit *widget, QWidget *parent);
 
-    // Parse "BountyCoin:" URI into recipient object, return true on successful parsing
-    // See BountyCoin URI definition discussion here: https://bitcointalk.org/index.php?topic=33490.0
-    bool parseBountyCoinURI(const QUrl &uri, SendCoinsRecipient *out);
-    bool parseBountyCoinURI(QString uri, SendCoinsRecipient *out);
+    // Parse "BitBlock:" URI into recipient object, return true on successful parsing
+    // See BitBlock URI definition discussion here: https://bitcointalk.org/index.php?topic=33490.0
+    bool parseBitBlockURI(const QUrl &uri, SendCoinsRecipient *out);
+    bool parseBitBlockURI(QString uri, SendCoinsRecipient *out);
 
     // HTML escaping for rich text controls
     QString HtmlEscape(const QString& str, bool fMultiLine=false);
@@ -95,7 +95,7 @@ namespace GUIUtil
     bool GetStartOnSystemStartup();
     bool SetStartOnSystemStartup(bool fAutoStart);
 
-    /** Help message for BountyCoin-Qt, shown with --help. */
+    /** Help message for BitBlock-Qt, shown with --help. */
     class HelpMessageBox : public QMessageBox
     {
         Q_OBJECT

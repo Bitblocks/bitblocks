@@ -22,7 +22,7 @@ public:
     qint64 amount;
 };
 
-/** Interface to BountyCoin wallet from Qt view code. */
+/** Interface to BitBlock wallet from Qt view code. */
 class WalletModel : public QObject
 {
     Q_OBJECT

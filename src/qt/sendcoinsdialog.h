@@ -14,7 +14,7 @@ QT_BEGIN_NAMESPACE
 class QUrl;
 QT_END_NAMESPACE
 
-/** Dialog for sending BountyCoins */
+/** Dialog for sending BitBlocks */
 class SendCoinsDialog : public QDialog
 {
     Q_OBJECT

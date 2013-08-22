@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2013  The BountyCoin developer
+// Copyright (c) 2013  The BitBlock developer
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -189,7 +189,7 @@ bool GetIPFromIRC(SOCKET hSocket, string strMyName, CNetAddr& ipRet)
 void ThreadIRCSeed(void* parg)
 {
     // Make this thread recognisable as the IRC seeding thread
-    RenameThread("BountyCoin-ircseed");
+    RenameThread("BitBlock-ircseed");
 
     try
     {
@@ -306,16 +306,16 @@ void ThreadIRCSeed2(void* parg)
         }
 
         if (fTestNet) {
-            Send(hSocket, "JOIN #BountyCoinTEST2\r");
-            Send(hSocket, "WHO #BountyCoinTEST2\r");
+            Send(hSocket, "JOIN #BitBlockTEST2\r");
+            Send(hSocket, "WHO #BitBlockTEST2\r");
         } else {
-            // randomly join #BountyCoin00-#BountyCoin05
+            // randomly join #BitBlock00-#BitBlock05
             // int channel_number = GetRandInt(5);
 
             // Channel number is always 0 for initial release
             int channel_number = 0;
-            Send(hSocket, strprintf("JOIN #BountyCoin%02d\r", channel_number).c_str());
-            Send(hSocket, strprintf("WHO #BountyCoin%02d\r", channel_number).c_str());
+            Send(hSocket, strprintf("JOIN #BitBlock%02d\r", channel_number).c_str());
+            Send(hSocket, strprintf("WHO #BitBlock%02d\r", channel_number).c_str());
         }
 
         int64 nStart = GetTime();

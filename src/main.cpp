@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2013  The BountyCoin developer
+// Copyright (c) 2013  The BitBlock developer
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -44,7 +44,7 @@ static CBigNum bnProofOfStakeLimitTestNet(~uint256(0) >> 20);
 
 unsigned int nStakeMinAge = 60 * 60 * 24 * 30; // minimum age for coin age
 unsigned int nStakeMaxAge = 60 * 60 * 24 * 90; // stake age of full weight
-unsigned int nStakeTargetSpacing = 1 * 60; // 60 seconds block spacing
+unsigned int nStakeTargetSpacing = 1 * 90; // 90 seconds block spacing
 const int64 nChainStartTime = 1376215200; // 2013-08-10 8:00:00 GMT
 const int64 nTestNetStartTime = nChainStartTime; // 2013-08-03 18:00:00 GMT
 int nCoinbaseMaturity = 10; // mining need 30 confirm
@@ -69,7 +69,7 @@ map<uint256, map<uint256, CDataStream*> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "BountyCoin Signed Message:\n";
+const string strMessageMagic = "BitBlock Signed Message:\n";
 
 double dHashesPerSec;
 int64 nHPSTimerStart;
@@ -949,19 +949,19 @@ int64 GetProofOfWorkReward(int nHeight, int64 nFees, uint256 prevHash)
 	int64 nSubsidy = MAX_MINT_PROOF_OF_WORK;
 
 	if (nHeight == 1){
-		nSubsidy = MAX_MONEY * 0.005;
+		nSubsidy = MAX_MONEY * 0.0005;
 	}
 	else if (nHeight < 1440){
-		nSubsidy = 1 * COIN;
-	}
-	else if (nHeight < 2880){
 		nSubsidy = 2 * COIN;
 	}
+	else if (nHeight < 2880){
+		nSubsidy = 4 * COIN;
+	}
 	else if (nHeight < 4320){
-		nSubsidy = 3 * COIN;
+		nSubsidy = 6 * COIN;
 	}
 	else if (nHeight < 5760){
-		nSubsidy = 4 * COIN;
+		nSubsidy = 8 * COIN;
 	}
 
 	return nSubsidy + nFees;
@@ -981,7 +981,7 @@ int64 GetProofOfStakeReward(int64 nCoinAge, unsigned int nBits, unsigned int nTi
     CBigNum bnTargetLimit = bnProofOfStakeLimit;
     bnTargetLimit.SetCompact(bnTargetLimit.GetCompact());
 
-    // BountyCoin: reward for coin-year is cut in half every 64x multiply of PoS difficulty
+    // BitBlock: reward for coin-year is cut in half every 64x multiply of PoS difficulty
     // A reasonably continuous curve is used to avoid shock to market
     // (nRewardCoinYearLimit / nRewardCoinYear) ** 4 == bnProofOfStakeLimit / bnTarget
     //
@@ -1348,7 +1348,7 @@ bool CTransaction::ConnectInputs(CTxDB& txdb, MapPrevTx inputs,
 {
     // Take over previous transactions' spent pointers
     // fBlock is true when this is called from AcceptBlock when a new best-block is added to the blockchain
-    // fMiner is true when called from the internal BountyCoin miner
+    // fMiner is true when called from the internal BitBlock miner
     // ... both are false when called from CTransaction::AcceptToMemoryPool
     if (!IsCoinBase())
     {
@@ -1547,8 +1547,8 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
     // Now that the whole chain is irreversibly beyond that time it is applied to all blocks except the
     // two in the chain that violate it. This prevents exploiting the issue against nodes in their
     // initial block download.
-    bool fEnforceBIP30 = true; // Always active in BountyCoin
-    bool fStrictPayToScriptHash = true; // Always active in BountyCoin
+    bool fEnforceBIP30 = true; // Always active in BitBlock
+    bool fStrictPayToScriptHash = true; // Always active in BitBlock
 
     //// issue here: it doesn't know the version
     unsigned int nTxPos;
@@ -1624,7 +1624,7 @@ bool CBlock::ConnectBlock(CTxDB& txdb, CBlockIndex* pindex, bool fJustCheck)
     if (!txdb.WriteBlockIndex(CDiskBlockIndex(pindex)))
         return error("Connect() : WriteBlockIndex for pindex failed");
 
-    // ppcoin: fees are not collected by miners as in BountyCoin
+    // ppcoin: fees are not collected by miners as in BitBlock
     // ppcoin: fees are destroyed to compensate the entire network
     if (fDebug && GetBoolArg("-printcreation"))
         printf("ConnectBlock() : destroy=%s nFees=%"PRI64d"\n", FormatMoney(nFees).c_str(), nFees);
@@ -2471,7 +2471,7 @@ bool CheckDiskSpace(uint64 nAdditionalBytes)
         string strMessage = _("Warning: Disk space is low!");
         strMiscWarning = strMessage;
         printf("*** %s\n", strMessage.c_str());
-        uiInterface.ThreadSafeMessageBox(strMessage, "BountyCoin", CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
+        uiInterface.ThreadSafeMessageBox(strMessage, "BitBlock", CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION | CClientUIInterface::MODAL);
         StartShutdown();
         return false;
     }
@@ -2560,7 +2560,7 @@ bool LoadBlockIndex(bool fAllowNew)
 
 
         // Genesis block
-        const char* pszTimestamp = "BountyCoin - Now the bounty has been placed!";
+        const char* pszTimestamp = "BitBlock - Veggin out to make a stable coin.";
         CTransaction txNew;
         txNew.nTime = fTestNet ? nTestNetStartTime : nChainStartTime;
         txNew.vin.resize(1);
@@ -2568,7 +2568,7 @@ bool LoadBlockIndex(bool fAllowNew)
         txNew.vin[0].scriptSig = CScript() << 486604799 << CBigNum(9999) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].SetEmpty();
         //txNew.vout[0].scriptPubKey = CScript() << ParseHex(pszMainKey) << OP_CHECKSIG;
-        txNew.strTxComment = "text:BountyCoin genesis block";
+        txNew.strTxComment = "text:BitBlock genesis block";
 
 
         CBlock block;
@@ -2578,7 +2578,7 @@ bool LoadBlockIndex(bool fAllowNew)
         block.nVersion = 1;
         block.nTime    = fTestNet ? nTestNetStartTime : nChainStartTime;;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
-        block.nNonce   = 2406681327;
+        block.nNonce   = 1377157491;
 
         if (IsCalculatingGenesisBlockHash && (block.GetHash() != hashGenesisBlock)) {
 			block.nNonce = 0;
@@ -2610,7 +2610,7 @@ bool LoadBlockIndex(bool fAllowNew)
         printf("block.nNonce = %u \n", block.nNonce);
         printf("block.nBits = %u \n", block.nBits);
 
-        assert(block.hashMerkleRoot == uint256("0x32def6dbcaa96a706d817969391631a26872e70a2b22c0dd06004a88f9660f26"));
+        assert(block.hashMerkleRoot == uint256("0x"));
         block.print();
         assert(block.GetHash() == (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet));
         assert(block.CheckBlock());
@@ -3869,7 +3869,7 @@ bool SendMessages(CNode* pto, bool fSendTrickle)
 
 //////////////////////////////////////////////////////////////////////////////
 //
-// BountyCoinMiner
+// BitBlockMiner
 //
 
 int static FormatHashBlocks(void* pbuffer, unsigned int len)
@@ -4348,10 +4348,10 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
     uint256 hashTarget = CBigNum().SetCompact(pblock->nBits).getuint256();
 
     if (hash > hashTarget && pblock->IsProofOfWork())
-        return error("BountyCoinMiner : proof-of-work not meeting target");
+        return error("BitBlockMiner : proof-of-work not meeting target");
 
     //// debug print
-    printf("BountyCoinMiner:\n");
+    printf("BitBlockMiner:\n");
     printf("new block found  \n  hash: %s  \ntarget: %s\n", hash.GetHex().c_str(), hashTarget.GetHex().c_str());
     pblock->print();
     printf("generated %s\n", FormatMoney(pblock->vtx[0].vout[0].nValue).c_str());
@@ -4360,7 +4360,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
     {
         LOCK(cs_main);
         if (pblock->hashPrevBlock != hashBestChain)
-            return error("BountyCoinMiner : generated block is stale");
+            return error("BitBlockMiner : generated block is stale");
 
         // Remove key from key pool
         reservekey.KeepKey();
@@ -4373,31 +4373,31 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
 
         // Process this block the same as if we had received it from another node
         if (!ProcessBlock(NULL, pblock))
-            return error("BountyCoinMiner : ProcessBlock, block not accepted");
+            return error("BitBlockMiner : ProcessBlock, block not accepted");
     }
 
     return true;
 }
 
-void static ThreadBountyCoinMiner(void* parg);
+void static ThreadBitBlockMiner(void* parg);
 
-static bool fGenerateBountyCoins = false;
+static bool fGenerateBitBlocks = false;
 static bool fLimitProcessors = false;
 static int nLimitProcessors = -1;
 
-void BountyCoinMiner(CWallet *pwallet, bool fProofOfStake)
+void BitBlockMiner(CWallet *pwallet, bool fProofOfStake)
 {
     printf("CPUMiner started for proof-of-%s\n", fProofOfStake? "stake" : "work");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
 
     // Make this thread recognisable as the mining thread
-    RenameThread("BountyCoin-miner");
+    RenameThread("BitBlock-miner");
 
     // Each thread has its own key and counter
     CReserveKey reservekey(pwallet);
     unsigned int nExtraNonce = 0;
 
-    while (fGenerateBountyCoins || fProofOfStake)
+    while (fGenerateBitBlocks || fProofOfStake)
     {
         if (fShutdown)
             return;
@@ -4406,7 +4406,7 @@ void BountyCoinMiner(CWallet *pwallet, bool fProofOfStake)
             Sleep(1000);
             if (fShutdown)
                 return;
-            if ((!fGenerateBountyCoins) && !fProofOfStake)
+            if ((!fGenerateBitBlocks) && !fProofOfStake)
                 return;
         }
 
@@ -4448,7 +4448,7 @@ void BountyCoinMiner(CWallet *pwallet, bool fProofOfStake)
             continue;
         }
 
-        printf("Running BountyCoinMiner with %"PRIszu" transactions in block (%u bytes)\n", pblock->vtx.size(),
+        printf("Running BitBlockMiner with %"PRIszu" transactions in block (%u bytes)\n", pblock->vtx.size(),
                ::GetSerializeSize(*pblock, SER_NETWORK, PROTOCOL_VERSION));
 
         //
@@ -4531,7 +4531,7 @@ void BountyCoinMiner(CWallet *pwallet, bool fProofOfStake)
             // Check for stop or if block needs to be rebuilt
             if (fShutdown)
                 return;
-            if (!fGenerateBountyCoins)
+            if (!fGenerateBitBlocks)
                 return;
             if (fLimitProcessors && vnThreadsRunning[THREAD_MINER] > nLimitProcessors)
                 return;
@@ -4556,35 +4556,35 @@ void BountyCoinMiner(CWallet *pwallet, bool fProofOfStake)
     }
 }
 
-void static ThreadBountyCoinMiner(void* parg)
+void static ThreadBitBlockMiner(void* parg)
 {
     CWallet* pwallet = (CWallet*)parg;
     try
     {
         vnThreadsRunning[THREAD_MINER]++;
-        BountyCoinMiner(pwallet, false);
+        BitBlockMiner(pwallet, false);
         vnThreadsRunning[THREAD_MINER]--;
     }
     catch (std::exception& e) {
         vnThreadsRunning[THREAD_MINER]--;
-        PrintException(&e, "ThreadBountyCoinMiner()");
+        PrintException(&e, "ThreadBitBlockMiner()");
     } catch (...) {
         vnThreadsRunning[THREAD_MINER]--;
-        PrintException(NULL, "ThreadBountyCoinMiner()");
+        PrintException(NULL, "ThreadBitBlockMiner()");
     }
     nHPSTimerStart = 0;
     if (vnThreadsRunning[THREAD_MINER] == 0)
         dHashesPerSec = 0;
-    printf("ThreadBountyCoinMiner exiting, %d threads remaining\n", vnThreadsRunning[THREAD_MINER]);
+    printf("ThreadBitBlockMiner exiting, %d threads remaining\n", vnThreadsRunning[THREAD_MINER]);
 }
 
 
-void GenerateBountyCoins(bool fGenerate, CWallet* pwallet)
+void GenerateBitBlocks(bool fGenerate, CWallet* pwallet)
 {
-    fGenerateBountyCoins = fGenerate;
+    fGenerateBitBlocks = fGenerate;
     nLimitProcessors = GetArg("-genproclimit", -1);
     if (nLimitProcessors == 0)
-        fGenerateBountyCoins = false;
+        fGenerateBitBlocks = false;
     fLimitProcessors = (nLimitProcessors != -1);
 
     if (fGenerate)
@@ -4596,11 +4596,11 @@ void GenerateBountyCoins(bool fGenerate, CWallet* pwallet)
         if (fLimitProcessors && nProcessors > nLimitProcessors)
             nProcessors = nLimitProcessors;
         int nAddThreads = nProcessors - vnThreadsRunning[THREAD_MINER];
-        printf("Starting %d BountyCoinMiner threads\n", nAddThreads);
+        printf("Starting %d BitBlockMiner threads\n", nAddThreads);
         for (int i = 0; i < nAddThreads; i++)
         {
-            if (!NewThread(ThreadBountyCoinMiner, pwallet))
-                printf("Error: NewThread(ThreadBountyCoinMiner) failed\n");
+            if (!NewThread(ThreadBitBlockMiner, pwallet))
+                printf("Error: NewThread(ThreadBitBlockMiner) failed\n");
             Sleep(10);
         }
     }

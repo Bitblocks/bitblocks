@@ -1,9 +1,9 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2013  The BountyCoin developer
+// Copyright (c) 2013  The BitBlock developer
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef BOUNTYCOIN_DB_H
-#define BOUNTYCOIN_DB_H
+#ifndef BITBLOCK_DB_H
+#define BITBLOCK_DB_H
 
 #include "main.h"
 
@@ -363,4 +363,4 @@ public:
     bool Read(CAddrMan& addr);
 };
 
-#endif // BOUNTYCOIN_DB_H
+#endif // BITBLOCK_DB_H

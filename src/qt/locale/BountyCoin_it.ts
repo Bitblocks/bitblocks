@@ -4,13 +4,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About BountyCoin</source>
-        <translation>Info su BountyCoin</translation>
+        <source>About BitBlock</source>
+        <translation>Info su BitBlock</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;BountyCoin&lt;/b&gt; version</source>
-        <translation>Versione di &lt;b&gt;BountyCoin&lt;/b&gt;</translation>
+        <source>&lt;b&gt;BitBlock&lt;/b&gt; version</source>
+        <translation>Versione di &lt;b&gt;BitBlock&lt;/b&gt;</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -35,7 +35,7 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     <message>
         <location line="+0"/>
         <source>Dr. Kimoto Chan</source>
-        <translation>Sviluppatori di BountyCoin</translation>
+        <translation>Sviluppatori di BitBlock</translation>
     </message>
 </context>
 <context>
@@ -67,8 +67,8 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your BountyCoin addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>Questi sono i tuoi indirizzi BountyCoin per ricevere pagamenti. Potrai darne uno diverso ad ognuno per tenere così traccia di chi ti sta pagando.</translation>
+        <source>These are your BitBlock addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>Questi sono i tuoi indirizzi BitBlock per ricevere pagamenti. Potrai darne uno diverso ad ognuno per tenere così traccia di chi ti sta pagando.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -82,7 +82,7 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a BountyCoin address</source>
+        <source>Sign a message to prove you own a BitBlock address</source>
         <translation>Firma un messaggio per dimostrare di possedere questo indirizzo</translation>
     </message>
     <message>
@@ -107,8 +107,8 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified BountyCoin address</source>
-        <translation>Verifica un messaggio per accertarsi che sia firmato con un indirizzo BountyCoin specifico</translation>
+        <source>Verify a message to ensure it was signed with a specified BitBlock address</source>
+        <translation>Verifica un messaggio per accertarsi che sia firmato con un indirizzo BitBlock specifico</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -122,7 +122,7 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your BountyCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitBlock addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -138,7 +138,7 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     <message>
         <location line="+1"/>
         <source>Send &amp;Coins</source>
-        <translation>Invia &amp;BountyCoin</translation>
+        <translation>Invia &amp;BitBlock</translation>
     </message>
     <message>
         <location line="+260"/>
@@ -248,8 +248,8 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BOUNTYCOINS&lt;/b&gt;!</source>
-        <translation>Attenzione: se si cifra il portamonete e si perde la frase d&apos;ordine, &lt;b&gt;SI PERDERANNO TUTTI I PROPRI BOUNTYCOIN&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITBLOCKS&lt;/b&gt;!</source>
+        <translation>Attenzione: se si cifra il portamonete e si perde la frase d&apos;ordine, &lt;b&gt;SI PERDERANNO TUTTI I PROPRI BITBLOCK&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -275,8 +275,8 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location line="-56"/>
-        <source>BountyCoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BountyCoins from being stolen by malware infecting your computer.</source>
-        <translation>BountyCoin verrà ora chiuso per finire il processo di crittazione. Ricorda che criptare il tuo portamonete non può fornire una protezione totale contro furti causati da malware che dovessero infettare il tuo computer.</translation>
+        <source>BitBlock will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your BitBlocks from being stolen by malware infecting your computer.</source>
+        <translation>BitBlock verrà ora chiuso per finire il processo di crittazione. Ricorda che criptare il tuo portamonete non può fornire una protezione totale contro furti causati da malware che dovessero infettare il tuo computer.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -321,9 +321,9 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
 </context>
 <context>
-    <name>BountyCoinGUI</name>
+    <name>BitBlockGUI</name>
     <message>
-        <location filename="../BountyCoingui.cpp" line="+233"/>
+        <location filename="../BitBlockgui.cpp" line="+233"/>
         <source>Sign &amp;message...</source>
         <translation>Firma il &amp;messaggio...</translation>
     </message>
@@ -374,8 +374,8 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about BountyCoin</source>
-        <translation>Mostra informazioni su BountyCoin</translation>
+        <source>Show information about BitBlock</source>
+        <translation>Mostra informazioni su BitBlock</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -419,13 +419,13 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a BountyCoin address</source>
-        <translation>Invia monete ad un indirizzo BountyCoin</translation>
+        <source>Send coins to a BitBlock address</source>
+        <translation>Invia monete ad un indirizzo BitBlock</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for BountyCoin</source>
-        <translation>Modifica configurazione opzioni per BountyCoin</translation>
+        <source>Modify configuration options for BitBlock</source>
+        <translation>Modifica configurazione opzioni per BitBlock</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -455,8 +455,8 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>BountyCoin</source>
-        <translation>BountyCoin</translation>
+        <source>BitBlock</source>
+        <translation>BitBlock</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -480,8 +480,8 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About BountyCoin</source>
-        <translation>&amp;Info su BountyCoin</translation>
+        <source>&amp;About BitBlock</source>
+        <translation>&amp;Info su BitBlock</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -500,13 +500,13 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your BountyCoin addresses to prove you own them</source>
-        <translation>Firma i messaggi con il tuo indirizzo BountyCoin per dimostrare di possederli</translation>
+        <source>Sign messages with your BitBlock addresses to prove you own them</source>
+        <translation>Firma i messaggi con il tuo indirizzo BitBlock per dimostrare di possederli</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified BountyCoin addresses</source>
-        <translation>Verifica i messaggi per accertarsi che siano stati firmati con gli indirizzi BountyCoin specificati</translation>
+        <source>Verify messages to ensure they were signed with specified BitBlock addresses</source>
+        <translation>Verifica i messaggi per accertarsi che siano stati firmati con gli indirizzi BitBlock specificati</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -536,13 +536,13 @@ Questo prodotto include software sviluppato dal progetto OpenSSL per l&apos;uso 
     </message>
     <message>
         <location line="+47"/>
-        <source>BountyCoin client</source>
-        <translation>BountyCoin client</translation>
+        <source>BitBlock client</source>
+        <translation>BitBlock client</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to BountyCoin network</source>
-        <translation><numerusform>%n connessione attiva alla rete BountyCoin</numerusform><numerusform>%n connessioni attive alla rete BountyCoin</numerusform></translation>
+        <source>%n active connection(s) to BitBlock network</source>
+        <translation><numerusform>%n connessione attiva alla rete BitBlock</numerusform><numerusform>%n connessioni attive alla rete BitBlock</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -657,8 +657,8 @@ Indirizzo: %4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid BountyCoin address or malformed URI parameters.</source>
-        <translation>Impossibile interpretare l&apos;URI! Ciò può essere causato da un indirizzo BountyCoin invalido o da parametri URI non corretti.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid BitBlock address or malformed URI parameters.</source>
+        <translation>Impossibile interpretare l&apos;URI! Ciò può essere causato da un indirizzo BitBlock invalido o da parametri URI non corretti.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -671,9 +671,9 @@ Indirizzo: %4
         <translation>Il portamonete è &lt;b&gt;cifrato&lt;/b&gt; e attualmente &lt;b&gt;bloccato&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../BountyCoin.cpp" line="+111"/>
-        <source>A fatal error occurred. BountyCoin can no longer continue safely and will quit.</source>
-        <translation>Riscontrato un errore irreversibile. BountyCoin non può più continuare in sicurezza e verrà terminato.</translation>
+        <location filename="../BitBlock.cpp" line="+111"/>
+        <source>A fatal error occurred. BitBlock can no longer continue safely and will quit.</source>
+        <translation>Riscontrato un errore irreversibile. BitBlock non può più continuare in sicurezza e verrà terminato.</translation>
     </message>
 </context>
 <context>
@@ -738,8 +738,8 @@ Indirizzo: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid BountyCoin address.</source>
-        <translation>L&apos;indirizzo inserito &quot;%1&quot; non è un indirizzo BountyCoin valido.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid BitBlock address.</source>
+        <translation>L&apos;indirizzo inserito &quot;%1&quot; non è un indirizzo BitBlock valido.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -757,8 +757,8 @@ Indirizzo: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>BountyCoin-Qt</source>
-        <translation>BountyCoin-Qt</translation>
+        <source>BitBlock-Qt</source>
+        <translation>BitBlock-Qt</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -821,13 +821,13 @@ Indirizzo: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start BountyCoin after logging in to the system.</source>
-        <translation>Avvia automaticamente BountyCoin all&apos;accensione del computer</translation>
+        <source>Automatically start BitBlock after logging in to the system.</source>
+        <translation>Avvia automaticamente BitBlock all&apos;accensione del computer</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start BountyCoin on system login</source>
-        <translation>&amp;Fai partire BountyCoin all&apos;avvio del sistema</translation>
+        <source>&amp;Start BitBlock on system login</source>
+        <translation>&amp;Fai partire BitBlock all&apos;avvio del sistema</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -846,8 +846,8 @@ Indirizzo: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the BountyCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Apri automaticamente la porta del client BountyCoin sul router. Questo funziona solo se il router supporta UPnP ed è abilitato.</translation>
+        <source>Automatically open the BitBlock client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Apri automaticamente la porta del client BitBlock sul router. Questo funziona solo se il router supporta UPnP ed è abilitato.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -856,7 +856,7 @@ Indirizzo: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the BountyCoin network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <source>Connect to the BitBlock network through a SOCKS proxy (e.g. when connecting through Tor).</source>
         <translation>Connettiti alla rete Bitcon attraverso un proxy SOCKS (ad esempio quando ci si collega via Tor)</translation>
     </message>
     <message>
@@ -931,8 +931,8 @@ Indirizzo: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting BountyCoin.</source>
-        <translation>La lingua dell&apos;interfaccia utente può essere impostata qui. L&apos;impostazione avrà effetto dopo il riavvio di BountyCoin.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting BitBlock.</source>
+        <translation>La lingua dell&apos;interfaccia utente può essere impostata qui. L&apos;impostazione avrà effetto dopo il riavvio di BitBlock.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -946,8 +946,8 @@ Indirizzo: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show BountyCoin addresses in the transaction list or not.</source>
-        <translation>Se mostrare l&apos;indirizzo BountyCoin nella transazione o meno.</translation>
+        <source>Whether to show BitBlock addresses in the transaction list or not.</source>
+        <translation>Se mostrare l&apos;indirizzo BitBlock nella transazione o meno.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -998,8 +998,8 @@ Indirizzo: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting BountyCoin.</source>
-        <translation>L&apos;impostazione avrà effetto dopo il riavvio di BountyCoin.</translation>
+        <source>This setting will take effect after restarting BitBlock.</source>
+        <translation>L&apos;impostazione avrà effetto dopo il riavvio di BitBlock.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1017,8 +1017,8 @@ Indirizzo: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BountyCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Le informazioni visualizzate sono datate. Il tuo partafogli verrà sincronizzato automaticamente con il network BountyCoin dopo che la connessione è stabilita, ma questo processo non può essere completato ora.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BitBlock network after a connection is established, but this process has not completed yet.</source>
+        <translation>Le informazioni visualizzate sono datate. Il tuo partafogli verrà sincronizzato automaticamente con il network BitBlock dopo che la connessione è stabilita, ma questo processo non può essere completato ora.</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -1071,7 +1071,7 @@ Indirizzo: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start BountyCoin: click-to-pay handler</source>
+        <source>Cannot start BitBlock: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -1221,8 +1221,8 @@ Indirizzo: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the BountyCoin-Qt help message to get a list with possible BountyCoin command-line options.</source>
-        <translation>Mostra il messaggio di aiuto di BountyCoin-QT per avere la lista di tutte le opzioni della riga di comando di BountyCoin.</translation>
+        <source>Show the BitBlock-Qt help message to get a list with possible BitBlock command-line options.</source>
+        <translation>Mostra il messaggio di aiuto di BitBlock-QT per avere la lista di tutte le opzioni della riga di comando di BitBlock.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1241,12 +1241,12 @@ Indirizzo: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>BountyCoin - Debug window</source>
-        <translation>BountyCoin - Finestra debug</translation>
+        <source>BitBlock - Debug window</source>
+        <translation>BitBlock - Finestra debug</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>BountyCoin Core</source>
+        <source>BitBlock Core</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1256,8 +1256,8 @@ Indirizzo: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the BountyCoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Apri il file di log del debug di BountyCoin dalla cartella attuale. Può richiedere alcuni secondi per file di log grandi.</translation>
+        <source>Open the BitBlock debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Apri il file di log del debug di BitBlock dalla cartella attuale. Può richiedere alcuni secondi per file di log grandi.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1266,8 +1266,8 @@ Indirizzo: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the BountyCoin RPC console.</source>
-        <translation>Benvenuto nella console RPC di BountyCoin</translation>
+        <source>Welcome to the BitBlock RPC console.</source>
+        <translation>Benvenuto nella console RPC di BitBlock</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1292,7 +1292,7 @@ Indirizzo: %4
         <location line="+5"/>
         <location line="+5"/>
         <source>Send Coins</source>
-        <translation>Spedisci BountyCoin</translation>
+        <translation>Spedisci BitBlock</translation>
     </message>
     <message>
         <location line="+50"/>
@@ -1342,7 +1342,7 @@ Indirizzo: %4
     <message>
         <location line="+5"/>
         <source>Confirm send coins</source>
-        <translation>Conferma la spedizione di BountyCoin</translation>
+        <translation>Conferma la spedizione di BitBlock</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1387,7 +1387,7 @@ Indirizzo: %4
     <message>
         <location line="+5"/>
         <source>Error: The transaction was rejected. This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Errore: la transazione è stata rifiutata. Ciò accade se alcuni BountyCoin nel portamonete sono stati già spesi, ad esempio se è stata usata una copia del file wallet.dat e i BountyCoin sono stati spesi dalla copia ma non segnati come spesi qui.</translation>
+        <translation>Errore: la transazione è stata rifiutata. Ciò accade se alcuni BitBlock nel portamonete sono stati già spesi, ad esempio se è stata usata una copia del file wallet.dat e i BitBlock sono stati spesi dalla copia ma non segnati come spesi qui.</translation>
     </message>
 </context>
 <context>
@@ -1450,8 +1450,8 @@ Indirizzo: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a BountyCoin address (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Inserisci un indirizzo BountyCoin (ad esempio 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a BitBlock address (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>Inserisci un indirizzo BitBlock (ad esempio 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
 </context>
 <context>
@@ -1474,7 +1474,7 @@ Indirizzo: %4
     <message>
         <location line="+18"/>
         <source>The address to sign the message with (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Inserisci un indirizzo BountyCoin (ad esempio 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <translation>Inserisci un indirizzo BitBlock (ad esempio 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1515,7 +1515,7 @@ Indirizzo: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this BountyCoin address</source>
+        <source>Sign the message to prove you own this BitBlock address</source>
         <translation>Firma un messaggio per dimostrare di possedere questo indirizzo</translation>
     </message>
     <message>
@@ -1547,12 +1547,12 @@ Indirizzo: %4
     <message>
         <location line="+21"/>
         <source>The address the message was signed with (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Inserisci un indirizzo BountyCoin (ad esempio 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <translation>Inserisci un indirizzo BitBlock (ad esempio 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified BountyCoin address</source>
-        <translation>Verifica il messaggio per assicurarsi che sia stato firmato con l&apos;indirizzo BountyCoin specificato</translation>
+        <source>Verify the message to ensure it was signed with the specified BitBlock address</source>
+        <translation>Verifica il messaggio per assicurarsi che sia stato firmato con l&apos;indirizzo BitBlock specificato</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1567,8 +1567,8 @@ Indirizzo: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a BountyCoin address (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Inserisci un indirizzo BountyCoin (ad esempio 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a BitBlock address (e.g. MNS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>Inserisci un indirizzo BitBlock (ad esempio 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1577,8 +1577,8 @@ Indirizzo: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter BountyCoin signature</source>
-        <translation>Inserisci firma BountyCoin</translation>
+        <source>Enter BitBlock signature</source>
+        <translation>Inserisci firma BitBlock</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1598,7 +1598,7 @@ Indirizzo: %4
         <location line="-81"/>
         <location line="+81"/>
         <source>The entered address does not refer to a key.</source>
-        <translation>L&apos;indirizzo BountyCoin inserito non è associato a nessuna chiave.</translation>
+        <translation>L&apos;indirizzo BitBlock inserito non è associato a nessuna chiave.</translation>
     </message>
     <message>
         <location line="-73"/>
@@ -1652,7 +1652,7 @@ Indirizzo: %4
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
         <source>Dr. Kimoto Chan</source>
-        <translation>Sviluppatori di BountyCoin</translation>
+        <translation>Sviluppatori di BitBlock</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1786,7 +1786,7 @@ Indirizzo: %4
     <message>
         <location line="+3"/>
         <source>Generated coins must mature 120 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Bisogna attendere 120 blocchi prima di spendere I BountyCoin generati. Quando è stato generato questo blocco, è stato trasmesso alla rete per aggiungerlo alla catena di blocchi. Se non riesce a entrare nella catena, verrà modificato in &quot;non accettato&quot; e non sarà spendibile. Questo può accadere a volte, se un altro nodo genera un blocco entro pochi secondi del tuo.</translation>
+        <translation>Bisogna attendere 120 blocchi prima di spendere I BitBlock generati. Quando è stato generato questo blocco, è stato trasmesso alla rete per aggiungerlo alla catena di blocchi. Se non riesce a entrare nella catena, verrà modificato in &quot;non accettato&quot; e non sarà spendibile. Questo può accadere a volte, se un altro nodo genera un blocco entro pochi secondi del tuo.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -2139,7 +2139,7 @@ Indirizzo: %4
     <message>
         <location filename="../walletmodel.cpp" line="+193"/>
         <source>Send Coins</source>
-        <translation>Spedisci BountyCoin</translation>
+        <translation>Spedisci BitBlock</translation>
     </message>
 </context>
 <context>
@@ -2186,11 +2186,11 @@ Indirizzo: %4
     </message>
 </context>
 <context>
-    <name>BountyCoin-core</name>
+    <name>BitBlock-core</name>
     <message>
-        <location filename="../BountyCoinstrings.cpp" line="+94"/>
-        <source>BountyCoin version</source>
-        <translation>Versione di BountyCoin</translation>
+        <location filename="../BitBlockstrings.cpp" line="+94"/>
+        <source>BitBlock version</source>
+        <translation>Versione di BitBlock</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2199,8 +2199,8 @@ Indirizzo: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or BountyCoind</source>
-        <translation>Manda il comando a -server o BountyCoind
+        <source>Send command to -server or BitBlockd</source>
+        <translation>Manda il comando a -server o BitBlockd
 </translation>
     </message>
     <message>
@@ -2223,14 +2223,14 @@ Indirizzo: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: BountyCoin.conf)</source>
-        <translation>Specifica il file di configurazione (di default: BountyCoin.conf)
+        <source>Specify configuration file (default: BitBlock.conf)</source>
+        <translation>Specifica il file di configurazione (di default: BitBlock.conf)
 </translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: BountyCoind.pid)</source>
-        <translation>Specifica il file pid (default: BountyCoind.pid)
+        <source>Specify pid file (default: BitBlockd.pid)</source>
+        <translation>Specifica il file pid (default: BitBlockd.pid)
 </translation>
     </message>
     <message>
@@ -2312,13 +2312,13 @@ Indirizzo: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=BountyCoinrpc
+rpcuser=BitBlockrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;BountyCoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;BitBlock Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -2334,13 +2334,13 @@ for example: alertnotify=echo %%s | mail -s &quot;BountyCoin Alert&quot; admin@f
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. BountyCoin is probably already running.</source>
-        <translation>Non è possibile ottenere i dati sulla cartella %s. Probabilmente BountyCoin è già in esecuzione.</translation>
+        <source>Cannot obtain a lock on data directory %s. BitBlock is probably already running.</source>
+        <translation>Non è possibile ottenere i dati sulla cartella %s. Probabilmente BitBlock è già in esecuzione.</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>Errore: la transazione è stata rifiutata. Ciò accade se alcuni BountyCoin nel portamonete sono stati già spesi, ad esempio se è stata usata una copia del file wallet.dat e i BountyCoin sono stati spesi dalla copia ma non segnati come spesi qui.</translation>
+        <translation>Errore: la transazione è stata rifiutata. Ciò accade se alcuni BitBlock nel portamonete sono stati già spesi, ad esempio se è stata usata una copia del file wallet.dat e i BitBlock sono stati spesi dalla copia ma non segnati come spesi qui.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -2379,8 +2379,8 @@ for example: alertnotify=echo %%s | mail -s &quot;BountyCoin Alert&quot; admin@f
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong BountyCoin will not work properly.</source>
-        <translation>Attenzione: si prega di controllare che la data del computer e l&apos;ora siano corrette. Se il vostro orologio è sbagliato BountyCoin non funziona correttamente.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong BitBlock will not work properly.</source>
+        <translation>Attenzione: si prega di controllare che la data del computer e l&apos;ora siano corrette. Se il vostro orologio è sbagliato BitBlock non funziona correttamente.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2500,7 +2500,7 @@ for example: alertnotify=echo %%s | mail -s &quot;BountyCoin Alert&quot; admin@f
     <message>
         <location line="+1"/>
         <source>Failed to write to coin database</source>
-        <translation>Scrittura nel database dei BountyCoin fallita</translation>
+        <translation>Scrittura nel database dei BitBlock fallita</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2629,8 +2629,8 @@ for example: alertnotify=echo %%s | mail -s &quot;BountyCoin Alert&quot; admin@f
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the BountyCoin Wiki for SSL setup instructions)</source>
-        <translation>Opzioni SSL: (vedi il wiki di BountyCoin per le istruzioni di configurazione SSL)</translation>
+        <source>SSL options: (see the BitBlock Wiki for SSL setup instructions)</source>
+        <translation>Opzioni SSL: (vedi il wiki di BitBlock per le istruzioni di configurazione SSL)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2831,13 +2831,13 @@ for example: alertnotify=echo %%s | mail -s &quot;BountyCoin Alert&quot; admin@f
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of BountyCoin</source>
-        <translation>Errore caricamento wallet.dat: il wallet richiede una versione nuova di BountyCoin</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of BitBlock</source>
+        <translation>Errore caricamento wallet.dat: il wallet richiede una versione nuova di BitBlock</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart BountyCoin to complete</source>
-        <translation>Il portamonete deve essere riscritto: riavviare BountyCoin per completare</translation>
+        <source>Wallet needed to be rewritten: restart BitBlock to complete</source>
+        <translation>Il portamonete deve essere riscritto: riavviare BitBlock per completare</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2896,8 +2896,8 @@ for example: alertnotify=echo %%s | mail -s &quot;BountyCoin Alert&quot; admin@f
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. BountyCoin is probably already running.</source>
-        <translation>Impossibile collegarsi alla %s su questo computer. Probabilmente BountyCoin è già in esecuzione.</translation>
+        <source>Unable to bind to %s on this computer. BitBlock is probably already running.</source>
+        <translation>Impossibile collegarsi alla %s su questo computer. Probabilmente BitBlock è già in esecuzione.</translation>
     </message>
     <message>
         <location line="+64"/>

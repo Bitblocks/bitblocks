@@ -1,4 +1,4 @@
-// Copyright (c) 2013 BountyCoin Developers
+// Copyright (c) 2013 BitBlock Developers
 
 #include <string.h>
 #include "pbkdf2.h"

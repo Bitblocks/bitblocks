@@ -1,8 +1,8 @@
-// Copyright (c) 2013 The BountyCoin developer
+// Copyright (c) 2013 The BitBlock developer
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef BOUNTYCOIN_VERSION_H
-#define BOUNTYCOIN_VERSION_H
+#ifndef BITBLOCK_VERSION_H
+#define BITBLOCK_VERSION_H
 
 #include "clientversion.h"
 #include <string>

@@ -1,12 +1,12 @@
 // Copyright (c) 2010 Satoshi Nakamoto
-// Copyright (c) 2013  The BountyCoin developer
+// Copyright (c) 2013  The BitBlock developer
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "main.h"
 #include "db.h"
 #include "init.h"
-#include "BountyCoinrpc.h"
+#include "BitBlockrpc.h"
 
 using namespace json_spirit;
 using namespace std;
@@ -43,7 +43,7 @@ Value setgenerate(const Array& params, bool fHelp)
     }
     mapArgs["-gen"] = (fGenerate ? "1" : "0");
 
-    GenerateBountyCoins(fGenerate, pwalletMain);
+    GenerateBitBlocks(fGenerate, pwalletMain);
     return Value::null;
 }
 
@@ -128,10 +128,10 @@ Value getworkex(const Array& params, bool fHelp)
         );
 
     if (vNodes.empty())
-        throw JSONRPCError(-9, "BountyCoin is not connected!");
+        throw JSONRPCError(-9, "BitBlock is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(-10, "BountyCoin is downloading blocks...");
+        throw JSONRPCError(-10, "BitBlock is downloading blocks...");
 
     typedef map<uint256, pair<CBlock*, CScript> > mapNewBlock_t;
     static mapNewBlock_t mapNewBlock;
@@ -262,10 +262,10 @@ Value getwork(const Array& params, bool fHelp)
             "If [data] is specified, tries to solve the block and returns true if it was successful.");
 
     if (vNodes.empty())
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "BountyCoin is not connected!");
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "BitBlock is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "BountyCoin is downloading blocks...");
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "BitBlock is downloading blocks...");
 
     typedef map<uint256, pair<CBlock*, CScript> > mapNewBlock_t;
     static mapNewBlock_t mapNewBlock;    // FIXME: thread safety
@@ -406,10 +406,10 @@ Value getblocktemplate(const Array& params, bool fHelp)
         throw JSONRPCError(RPC_INVALID_PARAMETER, "Invalid mode");
 
     if (vNodes.empty())
-        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "BountyCoin is not connected!");
+        throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "BitBlock is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "BountyCoin is downloading blocks...");
+        throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "BitBlock is downloading blocks...");
 
     static CReserveKey reservekey(pwalletMain);
 

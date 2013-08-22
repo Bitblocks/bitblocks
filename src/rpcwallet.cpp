@@ -1,11 +1,11 @@
 // Copyright (c) 2010 Satoshi Nakamoto
-// Copyright (c) 2013  The BountyCoin developer
+// Copyright (c) 2013  The BitBlock developer
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "wallet.h"
 #include "walletdb.h"
-#include "BountyCoinrpc.h"
+#include "BitBlockrpc.h"
 #include "init.h"
 #include "base58.h"
 
@@ -127,7 +127,7 @@ Value getnewaddress(const Array& params, bool fHelp)
     if (fHelp || params.size() > 1)
         throw runtime_error(
             "getnewaddress [account]\n"
-            "Returns a new BountyCoin address for receiving payments.  "
+            "Returns a new BitBlock address for receiving payments.  "
             "If [account] is specified (recommended), it is added to the address book "
             "so payments received with the address will be credited to [account].");
 
@@ -147,11 +147,11 @@ Value getnewaddress(const Array& params, bool fHelp)
 
     pwalletMain->SetAddressBookName(keyID, strAccount);
 
-    return CBountyCoinAddress(keyID).ToString();
+    return CBitBlockAddress(keyID).ToString();
 }
 
 
-CBountyCoinAddress GetAccountAddress(string strAccount, bool bForceNew=false)
+CBitBlockAddress GetAccountAddress(string strAccount, bool bForceNew=false)
 {
     CWalletDB walletdb(pwalletMain->strWalletFile);
 
@@ -186,7 +186,7 @@ CBountyCoinAddress GetAccountAddress(string strAccount, bool bForceNew=false)
         walletdb.WriteAccount(strAccount, account);
     }
 
-    return CBountyCoinAddress(account.vchPubKey.GetID());
+    return CBitBlockAddress(account.vchPubKey.GetID());
 }
 
 Value getaccountaddress(const Array& params, bool fHelp)
@@ -194,7 +194,7 @@ Value getaccountaddress(const Array& params, bool fHelp)
     if (fHelp || params.size() != 1)
         throw runtime_error(
             "getaccountaddress <account>\n"
-            "Returns the current BountyCoin address for receiving payments to this account.");
+            "Returns the current BitBlock address for receiving payments to this account.");
 
     // Parse the account first so we don't generate a key if there's an error
     string strAccount = AccountFromValue(params[0]);
@@ -212,12 +212,12 @@ Value setaccount(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 2)
         throw runtime_error(
-            "setaccount <BountyCoinAddress> <account>\n"
+            "setaccount <BitBlockAddress> <account>\n"
             "Sets the account associated with the given address.");
 
-    CBountyCoinAddress address(params[0].get_str());
+    CBitBlockAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid BountyCoin address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid BitBlock address");
 
 
     string strAccount;
@@ -242,12 +242,12 @@ Value getaccount(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)
         throw runtime_error(
-            "getaccount <BountyCoinAddress>\n"
+            "getaccount <BitBlockAddress>\n"
             "Returns the account associated with the given address.");
 
-    CBountyCoinAddress address(params[0].get_str());
+    CBitBlockAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid BountyCoin address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid BitBlock address");
 
     string strAccount;
     map<CTxDestination, string>::iterator mi = pwalletMain->mapAddressBook.find(address.Get());
@@ -268,9 +268,9 @@ Value getaddressesbyaccount(const Array& params, bool fHelp)
 
     // Find all addresses that have the given account
     Array ret;
-    BOOST_FOREACH(const PAIRTYPE(CBountyCoinAddress, string)& item, pwalletMain->mapAddressBook)
+    BOOST_FOREACH(const PAIRTYPE(CBitBlockAddress, string)& item, pwalletMain->mapAddressBook)
     {
-        const CBountyCoinAddress& address = item.first;
+        const CBitBlockAddress& address = item.first;
         const string& strName = item.second;
         if (strName == strAccount)
             ret.push_back(address.ToString());
@@ -282,13 +282,13 @@ Value sendtoaddress(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() < 2 || params.size() > 4)
         throw runtime_error(
-            "sendtoaddress <BountyCoinAddress> <amount> [comment] [comment-to]\n"
+            "sendtoaddress <BitBlockAddress> <amount> [comment] [comment-to]\n"
             "<amount> is a real and is rounded to the nearest 0.000001"
             + HelpRequiringPassphrase());
 
-    CBountyCoinAddress address(params[0].get_str());
+    CBitBlockAddress address(params[0].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid BountyCoin address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid BitBlock address");
 
     // Amount
     int64 nAmount = AmountFromValue(params[1]);
@@ -341,12 +341,12 @@ Value listaddressgroupings(const Array& params, bool fHelp)
         BOOST_FOREACH(CTxDestination address, grouping)
         {
             Array addressInfo;
-            addressInfo.push_back(CBountyCoinAddress(address).ToString());
+            addressInfo.push_back(CBitBlockAddress(address).ToString());
             addressInfo.push_back(ValueFromAmount(balances[address]));
             {
                 LOCK(pwalletMain->cs_wallet);
-                if (pwalletMain->mapAddressBook.find(CBountyCoinAddress(address).Get()) != pwalletMain->mapAddressBook.end())
-                    addressInfo.push_back(pwalletMain->mapAddressBook.find(CBountyCoinAddress(address).Get())->second);
+                if (pwalletMain->mapAddressBook.find(CBitBlockAddress(address).Get()) != pwalletMain->mapAddressBook.end())
+                    addressInfo.push_back(pwalletMain->mapAddressBook.find(CBitBlockAddress(address).Get())->second);
             }
             jsonGrouping.push_back(addressInfo);
         }
@@ -359,7 +359,7 @@ Value signmessage(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 2)
         throw runtime_error(
-            "signmessage <BountyCoinAddress> <message>\n"
+            "signmessage <BitBlockAddress> <message>\n"
             "Sign a message with the private key of an address");
 
     EnsureWalletIsUnlocked();
@@ -367,7 +367,7 @@ Value signmessage(const Array& params, bool fHelp)
     string strAddress = params[0].get_str();
     string strMessage = params[1].get_str();
 
-    CBountyCoinAddress addr(strAddress);
+    CBitBlockAddress addr(strAddress);
     if (!addr.IsValid())
         throw JSONRPCError(RPC_TYPE_ERROR, "Invalid address");
 
@@ -394,14 +394,14 @@ Value verifymessage(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 3)
         throw runtime_error(
-            "verifymessage <BountyCoinAddress> <signature> <message>\n"
+            "verifymessage <BitBlockAddress> <signature> <message>\n"
             "Verify a signed message");
 
     string strAddress  = params[0].get_str();
     string strSign     = params[1].get_str();
     string strMessage  = params[2].get_str();
 
-    CBountyCoinAddress addr(strAddress);
+    CBitBlockAddress addr(strAddress);
     if (!addr.IsValid())
         throw JSONRPCError(RPC_TYPE_ERROR, "Invalid address");
 
@@ -431,14 +431,14 @@ Value getreceivedbyaddress(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() < 1 || params.size() > 2)
         throw runtime_error(
-            "getreceivedbyaddress <BountyCoinaddress> [minconf=1]\n"
-            "Returns the total amount received by <BountyCoinaddress> in transactions with at least [minconf] confirmations.");
+            "getreceivedbyaddress <BitBlockaddress> [minconf=1]\n"
+            "Returns the total amount received by <BitBlockaddress> in transactions with at least [minconf] confirmations.");
 
-    // BountyCoin address
-    CBountyCoinAddress address = CBountyCoinAddress(params[0].get_str());
+    // BitBlock address
+    CBitBlockAddress address = CBitBlockAddress(params[0].get_str());
     CScript scriptPubKey;
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid BountyCoin address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid BitBlock address");
     scriptPubKey.SetDestination(address.Get());
     if (!IsMine(*pwalletMain,scriptPubKey))
         return (double)0.0;
@@ -659,14 +659,14 @@ Value sendfrom(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() < 3 || params.size() > 6)
         throw runtime_error(
-            "sendfrom <fromaccount> <ToBountyCoinAddress> <amount> [minconf=1] [comment] [comment-to]\n"
+            "sendfrom <fromaccount> <ToBitBlockAddress> <amount> [minconf=1] [comment] [comment-to]\n"
             "<amount> is a real and is rounded to the nearest 0.000001"
             + HelpRequiringPassphrase());
 
     string strAccount = AccountFromValue(params[0]);
-    CBountyCoinAddress address(params[1].get_str());
+    CBitBlockAddress address(params[1].get_str());
     if (!address.IsValid())
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid BountyCoin address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid BitBlock address");
     int64 nAmount = AmountFromValue(params[2]);
 
     if (nAmount < MIN_TXOUT_AMOUNT)
@@ -730,15 +730,15 @@ Value sendmany(const Array& params, bool fHelp)
     if (params.size() > 4 && params[4].type() != null_type && !params[4].get_str().empty())
         strTxComment = params[4].get_str();
 
-    set<CBountyCoinAddress> setAddress;
+    set<CBitBlockAddress> setAddress;
     vector<pair<CScript, int64> > vecSend;
 
     int64 totalAmount = 0;
     BOOST_FOREACH(const Pair& s, sendTo)
     {
-        CBountyCoinAddress address(s.name_);
+        CBitBlockAddress address(s.name_);
         if (!address.IsValid())
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid BountyCoin address: ")+s.name_);
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, string("Invalid BitBlock address: ")+s.name_);
 
         if (setAddress.count(address))
             throw JSONRPCError(RPC_INVALID_PARAMETER, string("Invalid parameter, duplicated address: ")+s.name_);
@@ -785,7 +785,7 @@ Value addmultisigaddress(const Array& params, bool fHelp)
     {
         string msg = "addmultisigaddress <nrequired> <'[\"key\",\"key\"]'> [account]\n"
             "Add a nrequired-to-sign multisignature address to the wallet\"\n"
-            "each key is a BountyCoin address or hex-encoded public key\n"
+            "each key is a BitBlock address or hex-encoded public key\n"
             "If [account] is specified, assign address to [account].";
         throw runtime_error(msg);
     }
@@ -809,8 +809,8 @@ Value addmultisigaddress(const Array& params, bool fHelp)
     {
         const std::string& ks = keys[i].get_str();
 
-        // Case 1: BountyCoin address and we have full public key:
-        CBountyCoinAddress address(ks);
+        // Case 1: BitBlock address and we have full public key:
+        CBitBlockAddress address(ks);
         if (address.IsValid())
         {
             CKeyID keyID;
@@ -845,7 +845,7 @@ Value addmultisigaddress(const Array& params, bool fHelp)
     pwalletMain->AddCScript(inner);
 
     pwalletMain->SetAddressBookName(innerID, strAccount);
-    return CBountyCoinAddress(innerID).ToString();
+    return CBitBlockAddress(innerID).ToString();
 }
 
 
@@ -873,7 +873,7 @@ Value ListReceived(const Array& params, bool fByAccounts)
         fIncludeEmpty = params[1].get_bool();
 
     // Tally
-    map<CBountyCoinAddress, tallyitem> mapTally;
+    map<CBitBlockAddress, tallyitem> mapTally;
     for (map<uint256, CWalletTx>::iterator it = pwalletMain->mapWallet.begin(); it != pwalletMain->mapWallet.end(); ++it)
     {
         const CWalletTx& wtx = (*it).second;
@@ -900,11 +900,11 @@ Value ListReceived(const Array& params, bool fByAccounts)
     // Reply
     Array ret;
     map<string, tallyitem> mapAccountTally;
-    BOOST_FOREACH(const PAIRTYPE(CBountyCoinAddress, string)& item, pwalletMain->mapAddressBook)
+    BOOST_FOREACH(const PAIRTYPE(CBitBlockAddress, string)& item, pwalletMain->mapAddressBook)
     {
-        const CBountyCoinAddress& address = item.first;
+        const CBitBlockAddress& address = item.first;
         const string& strAccount = item.second;
-        map<CBountyCoinAddress, tallyitem>::iterator it = mapTally.find(address);
+        map<CBitBlockAddress, tallyitem>::iterator it = mapTally.find(address);
         if (it == mapTally.end() && !fIncludeEmpty)
             continue;
 
@@ -1019,7 +1019,7 @@ void ListTransactions(const CWalletTx& wtx, const string& strAccount, int nMinDe
         {
             Object entry;
             entry.push_back(Pair("account", strSentAccount));
-            entry.push_back(Pair("address", CBountyCoinAddress(s.first).ToString()));
+            entry.push_back(Pair("address", CBitBlockAddress(s.first).ToString()));
             entry.push_back(Pair("category", "send"));
             entry.push_back(Pair("amount", ValueFromAmount(-s.second)));
             entry.push_back(Pair("fee", ValueFromAmount(-nFee)));
@@ -1041,7 +1041,7 @@ void ListTransactions(const CWalletTx& wtx, const string& strAccount, int nMinDe
             {
                 Object entry;
                 entry.push_back(Pair("account", account));
-                entry.push_back(Pair("address", CBountyCoinAddress(r.first).ToString()));
+                entry.push_back(Pair("address", CBitBlockAddress(r.first).ToString()));
                 if (wtx.IsCoinBase())
                 {
                     if (wtx.GetDepthInMainChain() < 1)
@@ -1357,7 +1357,7 @@ Value keypoolrefill(const Array& params, bool fHelp)
 void ThreadTopUpKeyPool(void* parg)
 {
     // Make this thread recognisable as the key-topping-up thread
-    RenameThread("BountyCoin-key-top");
+    RenameThread("BitBlock-key-top");
 
     pwalletMain->TopUpKeyPool();
 }
@@ -1365,7 +1365,7 @@ void ThreadTopUpKeyPool(void* parg)
 void ThreadCleanWalletPassphrase(void* parg)
 {
     // Make this thread recognisable as the wallet relocking thread
-    RenameThread("BountyCoin-lock-wa");
+    RenameThread("BitBlock-lock-wa");
 
     int64 nMyWakeTime = GetTimeMillis() + *((int64*)parg) * 1000;
 
@@ -1536,7 +1536,7 @@ Value encryptwallet(const Array& params, bool fHelp)
     // slack space in .dat files; that is bad if the old data is
     // unencrypted private keys. So:
     StartShutdown();
-    return "wallet encrypted; BountyCoin server stopping, restart to run with encrypted wallet.  The keypool has been flushed, you need to make a new backup.";
+    return "wallet encrypted; BitBlock server stopping, restart to run with encrypted wallet.  The keypool has been flushed, you need to make a new backup.";
 }
 
 class DescribeAddressVisitor : public boost::static_visitor<Object>
@@ -1566,7 +1566,7 @@ public:
         obj.push_back(Pair("script", GetTxnOutputType(whichType)));
         Array a;
         BOOST_FOREACH(const CTxDestination& addr, addresses)
-            a.push_back(CBountyCoinAddress(addr).ToString());
+            a.push_back(CBitBlockAddress(addr).ToString());
         obj.push_back(Pair("addresses", a));
         if (whichType == TX_MULTISIG)
             obj.push_back(Pair("sigsrequired", nRequired));
@@ -1578,10 +1578,10 @@ Value validateaddress(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() != 1)
         throw runtime_error(
-            "validateaddress <BountyCoinAddress>\n"
-            "Return information about <BountyCoinAddress>.");
+            "validateaddress <BitBlockAddress>\n"
+            "Return information about <BitBlockAddress>.");
 
-    CBountyCoinAddress address(params[0].get_str());
+    CBitBlockAddress address(params[0].get_str());
     bool isValid = address.IsValid();
 
     Object ret;
@@ -1607,8 +1607,8 @@ Value validatepubkey(const Array& params, bool fHelp)
 {
     if (fHelp || !params.size() || params.size() > 2)
         throw runtime_error(
-            "validatepubkey <BountyCoinPubkey>\n"
-            "Return information about <BountyCoinPubkey>.");
+            "validatepubkey <BitBlockPubkey>\n"
+            "Return information about <BitBlockPubkey>.");
 
     std::vector<unsigned char> vchPubKey = ParseHex(params[0].get_str());
     CPubKey pubKey(vchPubKey);
@@ -1617,7 +1617,7 @@ Value validatepubkey(const Array& params, bool fHelp)
     bool isCompressed = pubKey.IsCompressed();
     CKeyID keyID = pubKey.GetID();
 
-    CBountyCoinAddress address;
+    CBitBlockAddress address;
     address.Set(keyID);
 
     Object ret;
@@ -1727,7 +1727,7 @@ Value repairwallet(const Array& params, bool fHelp)
     return result;
 }
 
-// BountyCoin: resend unconfirmed wallet transactions
+// BitBlock: resend unconfirmed wallet transactions
 Value resendtx(const Array& params, bool fHelp)
 {
     if (fHelp || params.size() > 1)

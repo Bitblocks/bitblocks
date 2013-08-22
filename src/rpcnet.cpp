@@ -1,9 +1,9 @@
-// Copyright (c) 2003 BountyCoin Developer
+// Copyright (c) 2003 BitBlock Developer
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "net.h"
-#include "BountyCoinrpc.h"
+#include "BitBlockrpc.h"
 #include "alert.h"
 #include "wallet.h"
 #include "db.h"

@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2013  The BountyCoin developer
+// Copyright (c) 2013  The BitBlock developer
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -15,10 +15,10 @@
 #include <string>
 #include "uint256.h"
 
-const int DEF_PROT=8512;
-const int DEF_RPCPORT=18512;
+const int DEF_PROT=12455;
+const int DEF_RPCPORT=12456;
 const int DEF_TESTNET_PORT=8519;
-const int DEF_TESTNET_RPCPORT=18519;
+const int DEF_TESTNET_RPCPORT=17519;
 
 extern bool fTestNet;
 static inline unsigned short GetDefaultPort(const bool testnet = fTestNet)

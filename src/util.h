@@ -1,9 +1,9 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2013  The BountyCoin developer
+// Copyright (c) 2013  The BitBlock developer
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef BOUNTYCOIN_UTIL_H
-#define BOUNTYCOIN_UTIL_H
+#ifndef BITBLOCK_UTIL_H
+#define BITBLOCK_UTIL_H
 
 #include "uint256.h"
 

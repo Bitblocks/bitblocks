@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2013  The BountyCoin developer
+// Copyright (c) 2013  The BitBlock developer
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,8 +12,8 @@
 // - E-mail usually won't line-break if there's no punctuation to break at.
 // - Double-clicking selects the whole number as one word if it's all alphanumeric.
 //
-#ifndef BOUNTYCOIN_BASE58_H
-#define BOUNTYCOIN_BASE58_H
+#ifndef BITBLOCK_BASE58_H
+#define BITBLOCK_BASE58_H
 
 #include <string>
 #include <vector>
@@ -253,31 +253,31 @@ public:
     bool operator> (const CBase58Data& b58) const { return CompareTo(b58) >  0; }
 };
 
-/** base58-encoded BountyCoin addresses.
+/** base58-encoded BitBlock addresses.
  * Public-key-hash-addresses have version 0 (or 111 testnet).
  * The data vector contains RIPEMD160(SHA256(pubkey)), where pubkey is the serialized public key.
  * Script-hash-addresses have version 5 (or 196 testnet).
  * The data vector contains RIPEMD160(SHA256(cscript)), where cscript is the serialized redemption script.
  */
-class CBountyCoinAddress;
-class CBountyCoinAddressVisitor : public boost::static_visitor<bool>
+class CBitBlockAddress;
+class CBitBlockAddressVisitor : public boost::static_visitor<bool>
 {
 private:
-    CBountyCoinAddress *addr;
+    CBitBlockAddress *addr;
 public:
-    CBountyCoinAddressVisitor(CBountyCoinAddress *addrIn) : addr(addrIn) { }
+    CBitBlockAddressVisitor(CBitBlockAddress *addrIn) : addr(addrIn) { }
     bool operator()(const CKeyID &id) const;
     bool operator()(const CScriptID &id) const;
     bool operator()(const CNoDestination &no) const;
 };
 
-class CBountyCoinAddress : public CBase58Data
+class CBitBlockAddress : public CBase58Data
 {
 public:
     enum
     {
-        PUBKEY_ADDRESS = 25,
-        SCRIPT_ADDRESS = 30, 
+        PUBKEY_ADDRESS = 53,
+        SCRIPT_ADDRESS = 55, 
         PUBKEY_ADDRESS_TEST = 111,
         SCRIPT_ADDRESS_TEST = 196,
     };
@@ -294,7 +294,7 @@ public:
 
     bool Set(const CTxDestination &dest)
     {
-        return boost::apply_visitor(CBountyCoinAddressVisitor(this), dest);
+        return boost::apply_visitor(CBitBlockAddressVisitor(this), dest);
     }
 
     bool IsValid() const
@@ -327,21 +327,21 @@ public:
         return fExpectTestNet == fTestNet && vchData.size() == nExpectedSize;
     }
 
-    CBountyCoinAddress()
+    CBitBlockAddress()
     {
     }
 
-    CBountyCoinAddress(const CTxDestination &dest)
+    CBitBlockAddress(const CTxDestination &dest)
     {
         Set(dest);
     }
 
-    CBountyCoinAddress(const std::string& strAddress)
+    CBitBlockAddress(const std::string& strAddress)
     {
         SetString(strAddress);
     }
 
-    CBountyCoinAddress(const char* pszAddress)
+    CBitBlockAddress(const char* pszAddress)
     {
         SetString(pszAddress);
     }
@@ -394,18 +394,18 @@ public:
     }
 };
 
-bool inline CBountyCoinAddressVisitor::operator()(const CKeyID &id) const         { return addr->Set(id); }
-bool inline CBountyCoinAddressVisitor::operator()(const CScriptID &id) const      { return addr->Set(id); }
-bool inline CBountyCoinAddressVisitor::operator()(const CNoDestination &id) const { return false; }
+bool inline CBitBlockAddressVisitor::operator()(const CKeyID &id) const         { return addr->Set(id); }
+bool inline CBitBlockAddressVisitor::operator()(const CScriptID &id) const      { return addr->Set(id); }
+bool inline CBitBlockAddressVisitor::operator()(const CNoDestination &id) const { return false; }
 
 /** A base58-encoded secret key */
-class CBountyCoinSecret : public CBase58Data
+class CBitBlockSecret : public CBase58Data
 {
 public:
     void SetSecret(const CSecret& vchSecret, bool fCompressed)
     {
         assert(vchSecret.size() == 32);
-        SetData(128 + (fTestNet ? CBountyCoinAddress::PUBKEY_ADDRESS_TEST : CBountyCoinAddress::PUBKEY_ADDRESS), &vchSecret[0], vchSecret.size());
+        SetData(128 + (fTestNet ? CBitBlockAddress::PUBKEY_ADDRESS_TEST : CBitBlockAddress::PUBKEY_ADDRESS), &vchSecret[0], vchSecret.size());
         if (fCompressed)
             vchData.push_back(1);
     }
@@ -424,10 +424,10 @@ public:
         bool fExpectTestNet = false;
         switch(nVersion)
         {
-            case (128 + CBountyCoinAddress::PUBKEY_ADDRESS):
+            case (128 + CBitBlockAddress::PUBKEY_ADDRESS):
                 break;
 
-            case (128 + CBountyCoinAddress::PUBKEY_ADDRESS_TEST):
+            case (128 + CBitBlockAddress::PUBKEY_ADDRESS_TEST):
                 fExpectTestNet = true;
                 break;
 
@@ -447,12 +447,12 @@ public:
         return SetString(strSecret.c_str());
     }
 
-    CBountyCoinSecret(const CSecret& vchSecret, bool fCompressed)
+    CBitBlockSecret(const CSecret& vchSecret, bool fCompressed)
     {
         SetSecret(vchSecret, fCompressed);
     }
 
-    CBountyCoinSecret()
+    CBitBlockSecret()
     {
     }
 };

@@ -68,7 +68,7 @@ OBJS= \
     obj/main.o \
     obj/net.o \
     obj/protocol.o \
-    obj/BountyCoinrpc.o \
+    obj/BitBlockrpc.o \
     obj/rpcdump.o \
     obj/rpcnet.o \
     obj/rpcmining.o \
@@ -83,15 +83,15 @@ OBJS= \
     obj/noui.o \
     obj/kernel.o
 
-all: BountyCoind.exe
+all: BitBlockd.exe
 
-test check: test_BountyCoin.exe FORCE
-	test_BountyCoin.exe
+test check: test_BitBlock.exe FORCE
+	test_BitBlock.exe
 
 obj/%.o: %.cpp $(HEADERS)
 	g++ -c $(CFLAGS) -o $@ $<
 
-BountyCoind.exe: $(OBJS:obj/%=obj/%)
+BitBlockd.exe: $(OBJS:obj/%=obj/%)
 	g++ $(CFLAGS) $(LDFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
 TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
@@ -99,11 +99,11 @@ TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
 obj-test/%.o: test/%.cpp $(HEADERS)
 	g++ -c $(TESTDEFS) $(CFLAGS) -o $@ $<
 
-test_BountyCoin.exe: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
+test_BitBlock.exe: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
 	g++ $(CFLAGS) $(LDFLAGS) -o $@ $(LIBPATHS) $^ -lboost_unit_test_framework $(LIBS)
 
 clean:
-	-del /Q BountyCoind test_BountyCoin
+	-del /Q BitBlockd test_BitBlock
 	-del /Q obj\*
 	-del /Q obj-test\*
 

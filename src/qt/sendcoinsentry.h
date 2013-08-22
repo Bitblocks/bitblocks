@@ -9,7 +9,7 @@ namespace Ui {
 class WalletModel;
 class SendCoinsRecipient;
 
-/** A single entry in the dialog for sending BountyCoins. */
+/** A single entry in the dialog for sending BitBlocks. */
 class SendCoinsEntry : public QFrame
 {
     Q_OBJECT

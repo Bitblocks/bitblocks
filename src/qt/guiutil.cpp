@@ -1,7 +1,7 @@
 #include "guiutil.h"
-#include "BountyCoinaddressvalidator.h"
+#include "BitBlockaddressvalidator.h"
 #include "walletmodel.h"
-#include "BountyCoinunits.h"
+#include "BitBlockunits.h"
 #include "util.h"
 #include "init.h"
 
@@ -52,7 +52,7 @@ QString dateTimeStr(qint64 nTime)
     return dateTimeStr(QDateTime::fromTime_t((qint32)nTime));
 }
 
-QFont BountyCoinAddressFont()
+QFont BitBlockAddressFont()
 {
     QFont font("Monospace");
     font.setStyleHint(QFont::TypeWriter);
@@ -61,9 +61,9 @@ QFont BountyCoinAddressFont()
 
 void setupAddressWidget(QLineEdit *widget, QWidget *parent)
 {
-    widget->setMaxLength(BountyCoinAddressValidator::MaxAddressLength);
-    widget->setValidator(new BountyCoinAddressValidator(parent));
-    widget->setFont(BountyCoinAddressFont());
+    widget->setMaxLength(BitBlockAddressValidator::MaxAddressLength);
+    widget->setValidator(new BitBlockAddressValidator(parent));
+    widget->setFont(BitBlockAddressFont());
 }
 
 void setupAmountWidget(QLineEdit *widget, QWidget *parent)
@@ -75,9 +75,9 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
     widget->setAlignment(Qt::AlignRight|Qt::AlignVCenter);
 }
 
-bool parseBountyCoinURI(const QUrl &uri, SendCoinsRecipient *out)
+bool parseBitBlockURI(const QUrl &uri, SendCoinsRecipient *out)
 {
-    if(uri.scheme() != QString("BountyCoin"))
+    if(uri.scheme() != QString("BitBlock"))
         return false;
 
     SendCoinsRecipient rv;
@@ -102,7 +102,7 @@ bool parseBountyCoinURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if(!BountyCoinUnits::parse(BountyCoinUnits::BTC, i->second, &rv.amount))
+                if(!BitBlockUnits::parse(BitBlockUnits::BTC, i->second, &rv.amount))
                 {
                     return false;
                 }
@@ -120,18 +120,18 @@ bool parseBountyCoinURI(const QUrl &uri, SendCoinsRecipient *out)
     return true;
 }
 
-bool parseBountyCoinURI(QString uri, SendCoinsRecipient *out)
+bool parseBitBlockURI(QString uri, SendCoinsRecipient *out)
 {
-    // Convert BountyCoin:// to BountyCoin:
+    // Convert BitBlock:// to BitBlock:
     //
-    //    Cannot handle this later, because BountyCoin:// will cause Qt to see the part after // as host,
+    //    Cannot handle this later, because BitBlock:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("BountyCoin://"))
+    if(uri.startsWith("BitBlock://"))
     {
-        uri.replace(0, 10, "BountyCoin:");
+        uri.replace(0, 10, "BitBlock:");
     }
     QUrl uriInstance(uri);
-    return parseBountyCoinURI(uriInstance, out);
+    return parseBitBlockURI(uriInstance, out);
 }
 
 QString HtmlEscape(const QString& str, bool fMultiLine)
@@ -272,12 +272,12 @@ bool ToolTipToRichTextFilter::eventFilter(QObject *obj, QEvent *evt)
 #ifdef WIN32
 boost::filesystem::path static StartupShortcutPath()
 {
-    return GetSpecialFolderPath(CSIDL_STARTUP) / "BountyCoin.lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / "BitBlock.lnk";
 }
 
 bool GetStartOnSystemStartup()
 {
-    // check for BountyCoin.lnk
+    // check for BitBlock.lnk
     return boost::filesystem::exists(StartupShortcutPath());
 }
 
@@ -354,7 +354,7 @@ boost::filesystem::path static GetAutostartDir()
 
 boost::filesystem::path static GetAutostartFilePath()
 {
-    return GetAutostartDir() / "BountyCoin.desktop";
+    return GetAutostartDir() / "BitBlock.desktop";
 }
 
 bool GetStartOnSystemStartup()
@@ -392,10 +392,10 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         boost::filesystem::ofstream optionFile(GetAutostartFilePath(), std::ios_base::out|std::ios_base::trunc);
         if (!optionFile.good())
             return false;
-        // Write a BountyCoin.desktop file to the autostart directory:
+        // Write a BitBlock.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
-        optionFile << "Name=BountyCoin\n";
+        optionFile << "Name=BitBlock\n";
         optionFile << "Exec=" << pszExePath << " -min\n";
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
@@ -416,10 +416,10 @@ bool SetStartOnSystemStartup(bool fAutoStart) { return false; }
 HelpMessageBox::HelpMessageBox(QWidget *parent) :
     QMessageBox(parent)
 {
-    header = tr("BountyCoin-Qt") + " " + tr("version") + " " +
+    header = tr("BitBlock-Qt") + " " + tr("version") + " " +
         QString::fromStdString(FormatFullVersion()) + "\n\n" +
         tr("Usage:") + "\n" +
-        "  BountyCoin-qt [" + tr("command-line options") + "]                     " + "\n";
+        "  BitBlock-qt [" + tr("command-line options") + "]                     " + "\n";
 
     coreOptions = QString::fromStdString(HelpMessage());
 
@@ -428,7 +428,7 @@ HelpMessageBox::HelpMessageBox(QWidget *parent) :
         "  -min                   " + tr("Start minimized") + "\n" +
         "  -splash                " + tr("Show splash screen on startup (default: 1)") + "\n";
 
-    setWindowTitle(tr("BountyCoin-Qt"));
+    setWindowTitle(tr("BitBlock-Qt"));
     setTextFormat(Qt::PlainText);
     // setMinimumWidth is ignored for QMessageBox so put in non-breaking spaces to make it wider.
     setText(header + QString(QChar(0x2003)).repeated(50));
